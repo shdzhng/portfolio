@@ -25,6 +25,7 @@ const educationData = [
     ],
     type: 'school',
   },
+
   {
     name: 'Wageningen University & Research',
     degreeType: 'Master',

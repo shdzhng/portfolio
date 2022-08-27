@@ -6,22 +6,23 @@ import {
   Info,
   ProjectContainer,
   TimeLinePoint,
+  ProjectListItem,
 } from './timeline.styles';
 
-function DataCard({ data, i }) {
+function DataCard({ data }) {
   const { name, degreeName, degreeType, grade, projects, duration } = data;
 
   return (
-    <Container key={i}>
+    <Container>
       <TimeLinePoint />
       <Info>{duration}</Info>
       <Title>{`${degreeName}`}</Title>
       <Badge>{degreeType}</Badge>
       <Info>{grade ? `${name} (GPA:${grade})` : name}</Info>
       <ProjectContainer>
-        {/* {projects.map(({ name }) => (
-          <ProjectListItem>{name}</ProjectListItem>
-        ))} */}
+        {projects.map(({ name }, key) => (
+          <ProjectListItem key={key}>{name}</ProjectListItem>
+        ))}
       </ProjectContainer>
     </Container>
   );

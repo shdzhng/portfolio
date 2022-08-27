@@ -5,17 +5,17 @@ import {
   TimeLine,
   TimelineContainer,
   ContentContainer,
-  TimelineInnerLine,
 } from './timeline.styles';
 import DataCard from './DataCard';
 
 function Timeline() {
   return (
     <TimelineContainer>
+      <p>education timeline</p>
       <TimeLine />
       <ContentContainer>
-        {educationData.map((data, i) => (
-          <DataCard data={data} i={i} />
+        {educationData.map((data, key) => (
+          <DataCard data={data} key={key} />
         ))}
       </ContentContainer>
     </TimelineContainer>
