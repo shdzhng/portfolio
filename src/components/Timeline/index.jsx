@@ -11,7 +11,6 @@ import DataCard from './DataCard';
 function Timeline() {
   return (
     <TimelineContainer>
-      <p>education timeline</p>
       <TimeLine />
       <ContentContainer>
         {educationData.map((data, key) => (

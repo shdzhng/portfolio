@@ -18,6 +18,7 @@ function DataCard({ data }) {
       <Info>{duration}</Info>
       <Title>{`${degreeName}`}</Title>
       <Badge>{degreeType}</Badge>
+
       <Info>{grade ? `${name} (GPA:${grade})` : name}</Info>
       <ProjectContainer>
         {projects.map(({ name }, key) => (

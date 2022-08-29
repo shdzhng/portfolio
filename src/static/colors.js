@@ -3,5 +3,6 @@ export const colors = {
   darkGreen: '#283618',
   offWhite: '#fefae0',
   lightBrown: '#dda15e',
+  lightGray: '#c4c4c4',
   darkBrown: '#bc6c25',
 };
