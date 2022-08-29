@@ -9,6 +9,7 @@ const TimelineContainer = styled.div`
   grid-template-columns: 40% auto;
   justify-content: center;
   border-radius: 2em;
+  display: flex;
   @media screen and (min-width: 728px) {
     display: block;
     width: 70vw;
@@ -24,8 +25,8 @@ const TimeLinePoint = styled.div`
   width: 13px;
   height: 13px;
   top: calc(45% - 13px);
-  left: -13%;
-  transition: all 750ms ease;
+  left: -7%;
+  transition: border-color 750ms ease;
   @media screen and (min-width: 728px) {
     width: 13px;
     height: 13px;
@@ -65,7 +66,6 @@ const TimeLine = styled.div`
 const Title = styled.h5`
   color: ${colors.offWhite};
   font-weight: 900;
-  //
 `;
 
 const SmallText = styled.p`
@@ -114,6 +114,7 @@ const Badge = styled.div`
   -webkit-box-decoration-break: clone;
   transition: background-size 0.3s ease-in-out;
 `;
+
 const Container = styled.div`
   background-color: ${colors.oliveGreen};
   position: relative;
@@ -141,7 +142,7 @@ const Container = styled.div`
     content: ' ';
     background-color: ${colors.oliveGreen};
     position: absolute;
-    left: -7.5px;
+    left: -6px;
     top: calc(50% - 15px);
     transform: rotate(45deg);
     width: 12px;
