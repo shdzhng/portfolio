@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { colors } from '../../static/colors';
-import { keyframes } from 'styled-components';
 
 const TimelineContainer = styled.div`
   margin-top: 35px;
