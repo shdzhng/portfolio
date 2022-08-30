@@ -51,6 +51,7 @@ const Comment = styled.p`
 
   @media screen and (max-width: 728px) {
     text-align: left;
+    font-size: 0.8em;
   }
 `;
 
@@ -96,6 +97,23 @@ const SlideShowDot = styled.div`
   }
 `;
 
+const Heading = styled.h2`
+  color: ${colors.offWhite};
+  margin: 0;
+  @media screen and (max-width: 728px) {
+    font-size: 1em;
+  }
+`;
+
+const SmallText = styled.p`
+  font-size: '0.75em';
+  margin: 0;
+  color: ${colors.offWhite};
+  @media screen and (max-width: 728px) {
+    font-size: 0.5em;
+  }
+`;
+
 export {
   SlideShow,
   SlideShowSlider,
@@ -104,4 +122,6 @@ export {
   Slide,
   Comment,
   Divider,
+  SmallText,
+  Heading,
 };
