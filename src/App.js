@@ -3,8 +3,9 @@ import { colors } from './static/colors';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ReferenceSlider from './components/ReferenceSlider';
-import ProjectDisplay from './components/ProjectDisplay';
+import ProjectDisplay from './components/Projects';
 import { useEffect } from 'react';
+import Divider from './static/components/Divder';
 
 function App() {
   useEffect(() => {
@@ -30,11 +31,13 @@ function App() {
             Shou Zhang
           </text>
         </svg>
-      </div> */}
+      </div> */}{' '}
       <ProjectDisplay />
+      <Divider />
       <ReferenceSlider />
-
+      <Divider />
       <Timeline />
+      <Divider />
       <Footer />
     </div>
   );
