@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { referenceData } from '../../static/data';
 import {
   Slide,
@@ -23,37 +23,38 @@ function ReferenceSlider() {
   const [pause, setPause] = useState(false);
   const timeoutRef = useRef(null);
 
-  function resetTimeout() {
+  const resetTimeout = useCallback(() => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-  }
+  }, []);
 
-  const handeIncrement = (prop) => {
-    switch (prop) {
+  const handeIncrement = useCallback((command) => {
+    const max = referenceData.length - 1;
+    switch (command) {
       case 'increment': {
         setIndex((cur) => {
-          if (cur === 4) return 1;
+          if (cur >= max) return 1;
           return cur + 2;
         });
       }
       case 'decrement': {
         setIndex((cur) => {
-          if (cur <= 0) return 4;
+          if (cur <= 0) return max;
           return cur - 1;
         });
       }
     }
-  };
+  }, []);
 
-  const handleMouseEnter = (i) => {
+  const handleMouseEnter = useCallback((i) => {
     setIndex(i);
     setPause(true);
-  };
+  }, []);
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = useCallback(() => {
     setPause(false);
-  };
+  }, []);
 
   useEffect(() => {
     resetTimeout();

@@ -52,19 +52,27 @@ const educationData = [
 
 const referenceData = [
   {
+    name: 'M. Golden',
+    organization: 'David Kim for Congress',
+    relationship: 'Manager',
+    comment:
+      "It didn't  take long for me to see how <span class='underline'>Shou is the consummate professional.</span> His skill set is  wide-ranging and multi-faceted, but that barely scratches the surface of what makes Shou such an amazing asset to our team. Shou is <span class='underline'>pro-active, kind, and beyond hard working.</span> To be honest, I don't know where he finds the hours to be so exact and detailed on such a wide range of projects, all while pursuing multiple volunteer opportunities that make his community a better place.</br> </br> <span class='bold'> If you're looking for a combination of <span class='underline'>work ethic, attention to detail, reliability and heart</span>, look no further than Shou. </span>",
+  },
+  {
+    name: 'A. Racelis',
+    organization: 'Chinese Historical Society of America Museum',
+    relationship: 'Co-Worker',
+    comment:
+      'I’ve only known Shou to be committed to excellence while at the same time always looking for new ways to learn-either by mastering new skills or through his genuine openness in meeting people from all walks of life. This quality makes Shou a leader because he is able to build connections and has the ability to motivate others to do their best. Shou’s <span class="underline">creativity and engaging nature encouraged all of us who worked with him to share ideas and thoughts with each other</span>. This fostered a very trusting and positive work environment. What makes Shou stand out, apart from his genuine kindness, is his call to action. His drive to achieve his goals are not selfishly motivated but are <span class="underline">mission driven</span>. Having worked for a non-profit organization, Shou has always been <span class="underline">someone who aspires make a positive difference on others </span> and build community however he can. </br></br><span class="bold">Shou is not just multi-talented and skillful in technology and research but is also led by a good set of values making him a very valuable individual that is focused and highly motivated but also empathetic and caring of others.</span>',
+  },
+  {
     name: 'A. Pedersen',
     organization: 'Smithsonian Center for Folklife and Cultural Heritage',
     relationship: 'Mentor',
     comment:
       'I was Shou’s immediate intern supervisor during his internship at the Smithsonian Center for Folklife and Cultural Heritage’s... Impact Evaluation Framework... He thought through any given task thoroughly and asked thoughtful questions if anything was unclear. He worked on developing and reviewing surveys, analyzing data, and provided very insightful feedback and recommendations, highly useful for the Center. Shou delivered great results on his assigned tasks and <span class="underline">accomplished more than anticipated for the internship.</span> </br></br> <span class="bold">I strongly vouch for his <span class="underline">professionalism, research skills, responsible and mature nature.</span></span>',
   },
-  {
-    name: 'M. Golden',
-    organization: 'David Kim for Congress',
-    relationship: 'Manager',
-    comment:
-      "It didn't  take long for me to see how Shou is the consummate professional. His skill set is  wide-ranging and multi-faceted, but that barely scratches the surface of what makes Shou such an amazing asset to our team. Shou is <span class='underline'>pro-active, kind, and beyond hard working.</span> To be honest, I don't know where he finds the hours to be so exact and detailed on such a wide range of projects, all while pursuing multiple volunteer opportunities that make his community a better place.</br> </br> <span class='bold'> If you're looking for a combination of <span class='underline'>work ethic, attention to detail, reliability and heart</span>, look no further than Shou. </span>",
-  },
+
   {
     name: 'P. Pourbahador',
     organization: 'Wageningen University',

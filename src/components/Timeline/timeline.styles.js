@@ -104,7 +104,7 @@ const Badge = styled.div`
   height: fit-content;
   font-size: 0.4em;
   border-radius: 20px;
-
+  background-repeat: no-repeat;
   background-position: left;
   background-size: 0% 100%;
   background-image: linear-gradient(to right, #9ae6b4, yellow);

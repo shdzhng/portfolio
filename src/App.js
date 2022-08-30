@@ -3,10 +3,14 @@ import { colors } from './static/colors';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ReferenceSlider from './components/ReferenceSlider';
-
-const CONSOLE_MESSAGE = 'Hello, my name is Shou';
+import ProjectDisplay from './components/ProjectDisplay';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    // console.log('%c Hello there! ', 'background: #222; color: #bada55');
+  }, []);
+
   return (
     <div
       className="App"
@@ -20,12 +24,16 @@ function App() {
       }}
     >
       <Header />
-      <svg width="100%" height="100%" fill={colors.oliveGreen}>
-        <text x="50%" y="70%" textAnchor="middle" className={'animate-text'}>
-          Shou Zhang
-        </text>
-      </svg>
+      {/* <div>
+        <svg width="100%" height="100%" fill={colors.oliveGreen}>
+          <text x="50%" y="70%" textAnchor="middle" className={'animate-text'}>
+            Shou Zhang
+          </text>
+        </svg>
+      </div> */}
+      <ProjectDisplay />
       <ReferenceSlider />
+
       <Timeline />
       <Footer />
     </div>
