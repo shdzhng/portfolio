@@ -3,9 +3,9 @@ import { keyframes } from 'styled-components';
 import { colors } from '../../static/colors';
 
 const Container = styled.div`
-  margin: 2em auto 0 auto;
-  width: 80vw;
-  min-height: 65vh;
+  margin: 3em auto 0 8.25em;
+  width: 70vw;
+  min-height: 55vh;
   display: flex;
 
   @media screen and (max-width: 728px) {
@@ -71,6 +71,7 @@ const ButtonGroup = styled.div`
   gap: 1em;
   @media screen and (max-width: 728px) {
     padding-bottom: 1em;
+    margin-right: 2em;
   }
 `;
 
@@ -78,16 +79,16 @@ const AnchorButton = styled.a`
   display: grid;
   justify-content: center;
   align-content: center;
+  text-align: center;
   height: 2em;
   width: 4em;
   background-color: ${colors.offWhite};
   color: ${colors.red};
-  font-size: 1.25em;
-  font-weight: 900;
+  padding: 0.25em;
+  font-weight: 800;
   text-decoration: none;
   border-radius: 2em;
   transition: all 300ms ease-in-out;
-
   &:hover,
   &:active {
     background-color: ${colors.red};
@@ -102,15 +103,16 @@ const Heading = styled.h1`
 `;
 
 const ModalBackground = styled.div`
-  display: ${(props) => (props.open ? 'block' : 'none')};
+  display: ${(props) => (props.open ? 'inline-flex' : 'none')};
   position: fixed;
-  height: 100vh;
   top: 0;
   left: 0;
   z-index: 2;
-  overflow: auto;
   width: 100vw;
   background-color: ${colors.darkGreen}90;
+  overflow-y: hidden;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ModalContent = styled.div`

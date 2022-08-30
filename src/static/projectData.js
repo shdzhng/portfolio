@@ -21,6 +21,7 @@ const projectData = [
     links: {
       github: 'https://github.com/shdzhng/Mooday-Journal-Mood-Tracker',
       demo: 'https://mooday-demo.web.app/',
+      youtube: 'EIcrskdaSMM',
     },
   },
   {
