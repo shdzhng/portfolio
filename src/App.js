@@ -3,11 +3,12 @@ import { colors } from './static/colors';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ReferenceSlider from './components/ReferenceSlider';
+import ProjectDisplay from './components/ProjectDisplay';
 import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    console.log('%c Hello there! ', 'background: #222; color: #bada55');
+    // console.log('%c Hello there! ', 'background: #222; color: #bada55');
   }, []);
 
   return (
@@ -30,7 +31,9 @@ function App() {
           </text>
         </svg>
       </div> */}
+      <ProjectDisplay />
       <ReferenceSlider />
+
       <Timeline />
       <Footer />
     </div>

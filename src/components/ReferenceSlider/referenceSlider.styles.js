@@ -46,7 +46,8 @@ const Comment = styled.p`
     margin-left: 10px;
   }
   .bold {
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 1.5em;
   }
 
   .underline {
@@ -56,12 +57,16 @@ const Comment = styled.p`
     padding-bottom: 2px;
     display: inline;
     background-repeat: no-repeat;
-    transition: all 500ms ease-in-out;
+    transition: background-size 500ms ease-in-out;
   }
 
   @media screen and (max-width: 728px) {
     text-align: left;
     font-size: 0.8em;
+    &:before,
+    &:after {
+      display: none;
+    }
   }
 `;
 
