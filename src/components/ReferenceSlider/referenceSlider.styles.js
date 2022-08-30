@@ -7,6 +7,19 @@ const SlideShow = styled.div`
   width: 100%;
 `;
 
+const Container = styled.div`
+  display: flex;
+  margintop: 2em;
+  backgroundcolor: ${colors.darkBrown}10;
+  padding: 1em 0;
+  borderradius: 2em;
+  width: 60vw;
+  height: fit-content;
+  @media screen and (max-width: 728px) {
+    width: 90vw;
+  }
+`;
+
 const Divider = styled.div`
   content: '';
   background-color: ${colors.yellow};
@@ -62,10 +75,34 @@ const Comment = styled.p`
 
   @media screen and (max-width: 728px) {
     text-align: left;
-    font-size: 0.8em;
+    font-size: 0.7em;
+    height: 30vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: normal;
+    word-wrap: normal;
+    word-break: normal;
+    -ms-word-break: normal;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
     &:before,
     &:after {
       display: none;
+    }
+    .bold {
+      font-size: 1em;
+    }
+    ::-webkit-scrollbar {
+      width: 5px;
+      background-color: ${colors.oliveGreen};
+    }
+    ::-webkit-scrollbar-track {
+      background: ${colors.oliveGreen};
+    }
+    ::-webkit-scrollbar-thumb {
+      background: ${colors.offWhite};
     }
   }
 `;
@@ -139,4 +176,5 @@ export {
   Divider,
   SmallText,
   Heading,
+  Container,
 };

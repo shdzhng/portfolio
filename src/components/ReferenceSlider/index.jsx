@@ -7,6 +7,7 @@ import {
   SlideShowDots,
   SlideShowDot,
   Comment,
+  Container,
   SmallText,
   Heading,
   Divider,
@@ -72,17 +73,7 @@ function ReferenceSlider() {
   }, [index, pause]);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        marginTop: '2em',
-        backgroundColor: `${colors.darkBrown}10`,
-        padding: '1em 0',
-        borderRadius: '2em',
-        width: '60vw',
-        height: 'fit-content',
-      }}
-    >
+    <Container>
       <SlideShow>
         <SlideShowSlider
           style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
@@ -152,7 +143,7 @@ function ReferenceSlider() {
           <ArrowDropDownTwoToneIcon />
         </IconButton>
       </SlideShowDots>
-    </div>
+    </Container>
   );
 }
 
