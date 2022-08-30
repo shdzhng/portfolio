@@ -57,7 +57,6 @@ function ReferenceSlider() {
 
   useEffect(() => {
     resetTimeout();
-    console.log(index);
     if (pause) return;
     timeoutRef.current = setTimeout(
       () =>
