@@ -20,6 +20,11 @@ function App() {
       }}
     >
       <Header />
+      <svg width="100%" height="100%" fill={colors.oliveGreen}>
+        <text x="50%" y="70%" textAnchor="middle" className={'animate-text'}>
+          Shou Zhang
+        </text>
+      </svg>
       <ReferenceSlider />
       <Timeline />
       <Footer />

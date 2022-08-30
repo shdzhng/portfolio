@@ -7,8 +7,12 @@ import {
   SlideShowDots,
   SlideShowDot,
   Comment,
+  Divider,
 } from './referenceSlider.styles';
 import { colors } from '../../static/colors';
+import ArrowDropUpTwoToneIcon from '@mui/icons-material/ArrowDropUpTwoTone';
+import ArrowDropDownTwoToneIcon from '@mui/icons-material/ArrowDropDownTwoTone';
+import { IconButton } from '@mui/material';
 
 const DELAY = 3000;
 
@@ -23,6 +27,23 @@ function ReferenceSlider() {
     }
   }
 
+  const handeIncrement = (prop) => {
+    switch (prop) {
+      case 'increment': {
+        setIndex((cur) => {
+          if (cur === 4) return 1;
+          return cur + 2;
+        });
+      }
+      case 'decrement': {
+        setIndex((cur) => {
+          if (cur <= 0) return 4;
+          return cur - 1;
+        });
+      }
+    }
+  };
+
   const handleMouseEnter = (i) => {
     setIndex(i);
     setPause(true);
@@ -34,6 +55,7 @@ function ReferenceSlider() {
 
   useEffect(() => {
     resetTimeout();
+    console.log(index);
     if (pause) return;
     timeoutRef.current = setTimeout(
       () =>
@@ -63,48 +85,54 @@ function ReferenceSlider() {
         <SlideShowSlider
           style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
         >
-          {referenceData.map(
-            ({ name, relationship, organization, comment }, i) => (
-              <Slide
-                key={i}
-                onMouseEnter={(__) => {
-                  handleMouseEnter(i);
-                }}
-                onMouseLeave={(__) => {
-                  handleMouseLeave();
+          {referenceData.map(({ name, organization, comment }, i) => (
+            <Slide
+              key={i}
+              onMouseEnter={(__) => {
+                handleMouseEnter(i);
+              }}
+              onMouseLeave={(__) => {
+                handleMouseLeave();
+              }}
+            >
+              <div
+                style={{
+                  textAlign: 'center',
+                  marginTop: '0.5em',
+                  padding: '1em 2em',
                 }}
               >
-                <div
+                <h2 style={{ color: colors.offWhite }}>{name}</h2>
+                <p
                   style={{
-                    textAlign: 'center',
-                    marginTop: '0.5em',
-                    padding: '1em 2em',
+                    fontSize: '0.75em',
+                    color: colors.offWhite,
                   }}
                 >
-                  <h2 style={{ color: colors.offWhite }}>{name}</h2>
-                  <p
-                    style={{
-                      fontSize: '0.75em',
-                      color: colors.offWhite,
-                    }}
-                  >
-                    {organization}
-                  </p>
-                </div>
+                  {organization}
+                </p>
+              </div>
 
-                <Comment
-                  style={{
-                    color: colors.offWhite,
-                    margin: '0 2em 2em 2em',
-                  }}
-                  dangerouslySetInnerHTML={{ __html: comment }}
-                />
-              </Slide>
-            )
-          )}
+              <Comment
+                style={{
+                  color: colors.offWhite,
+                  margin: '0 2em 2em 2em',
+                }}
+                dangerouslySetInnerHTML={{ __html: comment }}
+              />
+            </Slide>
+          ))}
         </SlideShowSlider>
       </SlideShow>
+      <Divider />
+
       <SlideShowDots>
+        <IconButton
+          onClick={() => handeIncrement('decrement')}
+          sx={{ height: '15px', width: '15px', paddingTop: '20px' }}
+        >
+          <ArrowDropUpTwoToneIcon />
+        </IconButton>
         {referenceData.map((_, i) => (
           <SlideShowDot
             key={i}
@@ -115,6 +143,12 @@ function ReferenceSlider() {
             }}
           />
         ))}
+        <IconButton
+          onClick={() => handeIncrement('increment')}
+          sx={{ height: '15px', width: '15px', paddingBottom: '20px' }}
+        >
+          <ArrowDropDownTwoToneIcon />
+        </IconButton>
       </SlideShowDots>
     </div>
   );
