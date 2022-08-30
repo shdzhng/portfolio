@@ -63,7 +63,7 @@ const TimeLine = styled.div`
 `;
 
 const Title = styled.h5`
-  color: ${colors.offWhite};
+  color: inherit;
   font-weight: 900;
 `;
 
@@ -73,7 +73,7 @@ const SmallText = styled.p`
 
 const Info = styled.p`
   font-size: 0.8em;
-  color: ${colors.offWhite};
+  color: inherit;
 `;
 
 const ProjectContainer = styled.ul`
@@ -84,7 +84,7 @@ const ProjectContainer = styled.ul`
 `;
 
 const ProjectListItem = styled.li`
-  color: ${colors.offWhite};
+  color: inherit;
   font-size: 0.8em;
   &:before {
     content: '⭐';
@@ -98,7 +98,7 @@ const Badge = styled.div`
   top: 1em;
   right: 1em;
   padding: 0.75em 1.25em;
-  color: ${colors.offWhite};
+  color: inherit;
   background-color: ${colors.offWhite}20;
   width: fit-content;
   height: fit-content;
@@ -121,15 +121,22 @@ const Container = styled.div`
   height: fit-content;
   padding: 1em;
   align-self: auto;
+  color: ${colors.offWhite};
   box-shadow: 3px 3px 10px ${colors.darkGreen}60;
   transition-timing-function: ease-in;
   transition: all 1.5s ease;
   transition: box-shadow 150ms ease-in;
   &:hover {
     box-shadow: 8px 8px 15px ${colors.darkGreen}60;
+    background-color: ${colors.yellow};
+    color: ${colors.darkGreen};
+    &:after {
+      background-color: ${colors.yellow};
+    }
   }
   &:hover ${TimeLinePoint} {
-    border-color: ${colors.darkBrown};
+    border-color: ${colors.oliveGreen};
+    background-color: ${colors.yellow};
   }
   &:hover ${Badge} {
     background-size: 100% 100%;

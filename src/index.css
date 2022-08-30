@@ -1,14 +1,41 @@
-body,
-* {
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fefae0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 p {
   margin-top: 4px;
   margin-bottom: 4px;
+}
+
+.animate-text {
+  font-family: Lora;
+  letter-spacing: 10px;
+  stroke: #283618;
+  font-size: 150px;
+  font-weight: 700;
+  stroke-width: 3;
+  animation: textAnimate 5s 1;
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: #283618;
+  }
+
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: #606c38;
+  }
 }

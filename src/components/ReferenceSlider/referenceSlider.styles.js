@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { colors } from '../../static/colors';
-import { keyframes } from 'styled-components';
 
 const SlideShow = styled.div`
   margin: 0 auto;
@@ -8,11 +7,18 @@ const SlideShow = styled.div`
   width: 100%;
 `;
 
+const Divider = styled.div`
+  content: '';
+  background-color: ${colors.yellow};
+  width: 5px;
+  height: 100%;
+`;
+
 const SlideShowSlider = styled.div`
   white-space: nowrap;
   transition: linear 1000ms;
   -webkit-overflow-scrolling: touch;
-  width: 100%;
+  height: 100%;
   cursor: grab;
 `;
 
@@ -21,7 +27,14 @@ const Comment = styled.p`
   color: ${colors.offWhite};
   margin: 0 2em 2em 2em;
   text-align: justify;
-
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
   .bold {
     font-weight: 800;
   }
@@ -35,6 +48,10 @@ const Comment = styled.p`
     background-repeat: no-repeat;
     transition: all 500ms ease-in-out;
   }
+
+  @media screen and (max-width: 728px) {
+    text-align: left;
+  }
 `;
 
 const Slide = styled.div`
@@ -42,12 +59,11 @@ const Slide = styled.div`
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  width: 98%;
   margin-left: 1%;
   margin-right: 1%;
   border-radius: 40px;
   background-color: ${colors.darkGreen};
-
+  height: 100%;
   &:hover ${Comment} {
     .underline {
       background-size: 102% 102%;
@@ -59,14 +75,6 @@ const Slide = styled.div`
 const SlideShowDots = styled.div`
   text-align: center;
   margin-top: 50px;
-  &:before {
-    content: '';
-    background-color: ${colors.yellow};
-    width: 5px;
-    height: 330px;
-    transform: translate(-19px, -17%);
-    position: absolute;
-  }
 `;
 
 const SlideShowDot = styled.div`
@@ -75,7 +83,7 @@ const SlideShowDot = styled.div`
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  margin: 15px 7px 0px;
+  margin: 5px 7px;
   background-color: ${(props) =>
     props.active === true
       ? colors.red
@@ -84,7 +92,7 @@ const SlideShowDot = styled.div`
       : colors.lightGray};
   transition: all 250ms ease-in-out;
   &:hover {
-    background-color: ${colors.red};
+    background-color: ${(props) => (props.active ? colors.red : colors.yellow)};
   }
 `;
 
@@ -95,4 +103,5 @@ export {
   SlideShowDot,
   Slide,
   Comment,
+  Divider,
 };
