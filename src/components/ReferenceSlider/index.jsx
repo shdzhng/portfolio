@@ -7,6 +7,8 @@ import {
   SlideShowDots,
   SlideShowDot,
   Comment,
+  SmallText,
+  Heading,
   Divider,
 } from './referenceSlider.styles';
 import { colors } from '../../static/colors';
@@ -55,7 +57,6 @@ function ReferenceSlider() {
 
   useEffect(() => {
     resetTimeout();
-    console.log(index);
     if (pause) return;
     timeoutRef.current = setTimeout(
       () =>
@@ -102,15 +103,15 @@ function ReferenceSlider() {
                   padding: '1em 2em',
                 }}
               >
-                <h2 style={{ color: colors.offWhite }}>{name}</h2>
-                <p
+                <Heading style={{ color: colors.offWhite }}>{name}</Heading>
+                <SmallText
                   style={{
                     fontSize: '0.75em',
                     color: colors.offWhite,
                   }}
                 >
                   {organization}
-                </p>
+                </SmallText>
               </div>
 
               <Comment
