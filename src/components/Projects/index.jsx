@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import projectData from '../../static/projectData';
-import { Container, SideBarItem, SideBar } from './index.styles';
+import { Container, SideBarItem, SideBar } from './projects.styles';
 import ProjectContainer from './ProjectContainer';
-
-console.log(projectData);
-
+import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 function ProjectDisplay() {
   const [selectedProjectId, setSelectedProjectId] = useState(0);
 

@@ -6,6 +6,8 @@ import ReferenceSlider from './components/ReferenceSlider';
 import ProjectDisplay from './components/Projects';
 import { useEffect } from 'react';
 import Divider from './static/components/Divder';
+import FadeIn from './static/components/FadeIn';
+import AboutMe from './components/AboutMe';
 
 function App() {
   useEffect(() => {
@@ -18,28 +20,42 @@ function App() {
       style={{
         width: '100vw',
         height: '100vh',
-        backgroundColor: colors.offWhite,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
       }}
     >
-      <Header />
+      {/* <Header /> */}
       {/* <div>
         <svg width="100%" height="100%" fill={colors.oliveGreen}>
           <text x="50%" y="70%" textAnchor="middle" className={'animate-text'}>
             Shou Zhang
           </text>
         </svg>
-      </div> */}{' '}
-      <ProjectDisplay />
-      <Divider />
-      {/* <div style={{ display: 'flex', width: '90vw' }}> */}
-      <ReferenceSlider />
-      <Timeline />
-      {/* </div> */}
-      <Divider />
-      <Footer />
+      </div> */}
+
+      <div
+        style={{
+          margin: '0 auto',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <AboutMe />
+        <ProjectDisplay />
+        <Divider />
+        <FadeIn>
+          <ReferenceSlider />
+        </FadeIn>
+        <FadeIn>
+          <Timeline />
+        </FadeIn>
+
+        <Divider />
+      </div>
+      {/* <Footer /> */}
     </div>
   );
 }

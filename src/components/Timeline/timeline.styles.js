@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors } from '../../static/colors';
 
 const TimelineContainer = styled.div`
@@ -9,37 +9,22 @@ const TimelineContainer = styled.div`
   justify-content: center;
   border-radius: 2em;
   display: flex;
-  width: 60vw;
+  width: 70vw;
+
+  height: fit-content;
   @media screen and (min-width: 728px) {
-    display: block;
-    width: 40vw;
+    width: 60vw;
+    flex-direction: column;
   }
 `;
 
-const TimeLinePoint = styled.div`
-  border: none;
-  position: absolute;
-  border-radius: 50%;
-  background: ${colors.oliveGreen};
-  border: 3px solid ${colors.offWhite};
-  width: 13px;
-  height: 13px;
-  top: calc(45% - 11px);
-  left: -10.5%;
-  transition: border-color 750ms ease;
-  @media screen and (min-width: 728px) {
-    width: 13px;
-    height: 13px;
-    top: -28px;
-    left: calc(50% - 18px);
-  }
-`;
 const ContentContainer = styled.div`
   margin-top: 30px;
   position: relative;
   padding: 25px 25px 25px 15px;
   display: flex;
   flex-direction: column;
+  height: fit-content;
   justify-content: center;
   list-style: none;
   gap: 1em;
@@ -52,11 +37,12 @@ const ContentContainer = styled.div`
 `;
 
 const TimeLine = styled.div`
-  background: ${colors.darkBrown};
+  background: ${colors.yellow};
   width: 4px;
   border-radius: 12px;
   position: relative;
   justify-self: end;
+
   @media screen and (min-width: 728px) {
     width: 100%;
     height: 4px;
@@ -87,6 +73,7 @@ const ProjectContainer = styled.ul`
 
 const ProjectListItem = styled.li`
   color: inherit;
+
   font-size: 0.8em;
   &:before {
     content: '⭐';
@@ -116,6 +103,25 @@ const Badge = styled.div`
   transition: background-size 0.3s ease-in-out;
 `;
 
+const TimeLinePoint = styled.div`
+  border: none;
+  position: absolute;
+  border-radius: 50%;
+  background: ${colors.oliveGreen};
+  border: 3px solid ${colors.offWhite};
+  width: 13px;
+  height: 13px;
+  top: calc(45% - 11px);
+  left: -8%;
+  transition: border-color 750ms ease;
+  @media screen and (min-width: 728px) {
+    width: 13px;
+    height: 13px;
+    top: -28px;
+    left: calc(50% - 18px);
+  }
+`;
+
 const Container = styled.div`
   background-color: ${colors.oliveGreen};
   position: relative;
@@ -128,12 +134,12 @@ const Container = styled.div`
   transition-timing-function: ease-in;
   transition: all 1.5s ease;
   transition: box-shadow 150ms ease-in;
+
   &:hover {
     box-shadow: 8px 8px 15px ${colors.darkGreen}60;
-    background-color: ${colors.yellow};
-    color: ${colors.darkGreen};
+    background-color: ${colors.red};
     &:after {
-      background-color: ${colors.yellow};
+      background-color: ${colors.red};
     }
   }
   &:hover ${TimeLinePoint} {

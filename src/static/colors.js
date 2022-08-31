@@ -1,7 +1,7 @@
 export const colors = {
   oliveGreen: '#606c38',
   darkGreen: '#283618',
-  offWhite: '#fefae0',
+  offWhite: '#faf8ed',
   lightBrown: '#dda15e',
   lightGray: '#c4c4c4',
   darkBrown: '#bc6c25',
@@ -12,4 +12,5 @@ export const colors = {
   mediumBlue1: '#62b6cb',
   mediumBlue2: '#5fa8d3',
   darkBlue: '#1b4965',
+  black: '#000000',
 };
