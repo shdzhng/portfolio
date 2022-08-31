@@ -9,9 +9,10 @@ const TimelineContainer = styled.div`
   justify-content: center;
   border-radius: 2em;
   display: flex;
+  width: 60vw;
   @media screen and (min-width: 728px) {
     display: block;
-    width: 70vw;
+    width: 40vw;
   }
 `;
 
@@ -23,8 +24,8 @@ const TimeLinePoint = styled.div`
   border: 3px solid ${colors.offWhite};
   width: 13px;
   height: 13px;
-  top: calc(45% - 13px);
-  left: -7%;
+  top: calc(45% - 11px);
+  left: -10.5%;
   transition: border-color 750ms ease;
   @media screen and (min-width: 728px) {
     width: 13px;
@@ -65,6 +66,7 @@ const TimeLine = styled.div`
 const Title = styled.h5`
   color: inherit;
   font-weight: 900;
+  margin: 0;
 `;
 
 const SmallText = styled.p`
