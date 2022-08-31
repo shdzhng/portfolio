@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../static/colors';
+import { animated } from 'react-spring';
 
 const SlideShow = styled.div`
   margin: 0 auto;
@@ -9,10 +10,9 @@ const SlideShow = styled.div`
 
 const Container = styled.div`
   display: flex;
-  margintop: 2em;
-  backgroundcolor: ${colors.darkBrown}10;
+  background-color: ${colors.darkBrown}10;
   padding: 1em 0;
-  borderradius: 2em;
+  border-radius: 2em;
   width: 60vw;
   height: fit-content;
   @media screen and (max-width: 728px) {
@@ -48,7 +48,7 @@ const Comment = styled.p`
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-
+  line-height: 23px;
   &:before {
     content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23fefae0' viewBox='0 0 24 24'><path d='M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z'/></svg>");
     margin-right: 10px;
@@ -70,7 +70,7 @@ const Comment = styled.p`
     padding-bottom: 2px;
     display: inline;
     background-repeat: no-repeat;
-    transition: background-size 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
   }
 
   @media screen and (max-width: 728px) {

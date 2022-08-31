@@ -10,7 +10,7 @@ import {
   SectionContainer,
   ModalBackground,
   ModalContent,
-} from './index.styles';
+} from './projects.styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LocalSeeIcon from '@mui/icons-material/LocalSee';
 import YoutubeEmbed from '../../static/components/YoutubePlayer';
@@ -46,7 +46,7 @@ const ProjectContainer = ({ project }) => {
         <SectionContainer>
           <div style={{ flexBasis: '55%' }}>
             <Text variant="title">Description</Text>
-            <Text>{description}</Text>
+            <Text dangerouslySetInnerHTML={{ __html: description }}></Text>
           </div>
           <div style={{ flexBasis: '45%' }}>
             <Text variant="title">Technology</Text>
@@ -63,9 +63,11 @@ const ProjectContainer = ({ project }) => {
         <Text variant="title">Highlights</Text>
         <ListGroup variant="highlight">
           {highlights.map((highlight, i) => (
-            <ListItem variant="highlight" key={i}>
-              {highlight}
-            </ListItem>
+            <ListItem
+              variant="highlight"
+              key={i}
+              dangerouslySetInnerHTML={{ __html: highlight }}
+            />
           ))}
         </ListGroup>
 
