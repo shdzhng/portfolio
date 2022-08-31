@@ -34,9 +34,10 @@ function App() {
       </div> */}{' '}
       <ProjectDisplay />
       <Divider />
+      {/* <div style={{ display: 'flex', width: '90vw' }}> */}
       <ReferenceSlider />
-      <Divider />
       <Timeline />
+      {/* </div> */}
       <Divider />
       <Footer />
     </div>

@@ -98,7 +98,7 @@ const projectData = [
   {
     name: 'Odyssey (WIP)',
     description:
-      'A SPA tostreamline travel planning with friends. This project aims to develop cumulative cost splitting (no more tiny venmo transactions, just pay/receive what you owe at the end of the trip!), itinerary item voting, day by day planning with Map as visual support',
+      'A SPA tostreamline travel planning with friends. This project aims to develop cumulative cost splitting, itinerary item voting, day by day planning with Map as visual support',
     highlights: [
       'Utilized Firestore to handle social features such as sending and rejecting friend request, removing friend, and displaying online status.',
       'Leveraged Firebase Auth to handle user registartion.',

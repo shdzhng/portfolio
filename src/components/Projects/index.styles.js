@@ -14,6 +14,7 @@ const Container = styled.div`
     align-items: center;
     gap: 1em;
     min-height: 60vh;
+    margin: 0;
   }
 `;
 
@@ -109,6 +110,7 @@ const ModalBackground = styled.div`
   left: 0;
   z-index: 2;
   width: 100vw;
+  height: 100vh;
   background-color: ${colors.darkGreen}90;
   overflow-y: hidden;
   justify-content: center;
@@ -122,6 +124,10 @@ const ModalContent = styled.div`
   width: 50vw;
   z-index: 3;
   background-color: ${colors.offWhite};
+  @media screen and (max-width: 728px) {
+    padding: 25px;
+    width: 80vw;
+  }
 `;
 
 const Text = styled.p`
