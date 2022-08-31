@@ -180,19 +180,25 @@ const ListItem = styled.li`
 
 const slideFromRight = keyframes`
 from {  top:4em; left: 20em }
- to {  top:4em; left: 7em; }`;
+ to {  top:4em; left: 1em; }`;
 
 const SideBar = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 300px;
   margin-top: 2em;
   z-index: 0;
+  top: 4em;
+  left: 1em;
   gap: 0.25em;
   animation: ${slideFromRight} 1000ms ease-in-out;
+  animation-play-state: running;
+
   @media screen and (max-width: 728px) {
     flex-direction: row;
     animation: none;
+    position: static;
   }
 `;
 
