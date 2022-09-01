@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { referenceData } from '../../static/data';
+import referenceData from '../../static/referenceData';
 import {
   Slide,
   SlideShow,

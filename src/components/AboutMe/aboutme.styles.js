@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import headshot from './img/headshot.jpg';
-import plantsvg from './img/plant.svg';
+import ribbon from './img/ribbon.svg';
 import polkadot from './img/polkadot.svg';
 import { colors } from '../../static/colors.js';
 import { Link } from 'react-scroll';
@@ -60,7 +60,7 @@ const Portrait = styled.div`
   background-position-y: -230px;
   background-repeat: no-repeat;
   animation: ${backgroundImageZoom} 1000ms ease;
-
+  z-index: 5;
   @media screen and (max-width: 1100px) {
     height: 400px;
     background-size: 210%;
@@ -78,10 +78,58 @@ const Portrait = styled.div`
   }
 `;
 
+const windblowing = keyframes`    from {transform:rotate(-78deg); }
+       to {transform:rotate(-90deg);}`;
+
 const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 23%;
+
+  #banner {
+    position: absolute;
+    animation: ${windblowing} 3s ease-in-out alternate infinite;
+    padding: 2px;
+    top: 4em;
+    background-color: ${colors.yellow};
+    height: 1em;
+    z-index: 4;
+    width: 1em;
+    border-radius: 1em;
+    left: -0.15em;
+    &:hover {
+      animation-play-state: paused;
+      &:before {
+        content: '#Yes!';
+      }
+    }
+    &:before,
+    &:after {
+      position: absolute;
+    }
+    &:before {
+      content: '#OpenToWork';
+      color: ${colors.offWhite};
+      top: 0em;
+      left: -7.5em;
+      margin: 0 auto;
+      height: 200px;
+      font-size: 20px;
+      font-weight: 700;
+      z-index: 9;
+    }
+    &:after {
+      top: -5.7em;
+      left: -11.5em;
+      content: '';
+      width: 200px;
+      height: 200px;
+      transform: rotate(45deg);
+      background-image: url(${ribbon});
+      background-size: 100%;
+      z-index: -1;
+    }
+  }
 `;
 
 const TechstackContainer = styled.div`
@@ -166,7 +214,7 @@ const AboutMeContainer = styled.div`
   font-weight: 400;
   color: ${colors.black};
   transition: max-height 1s;
-
+  position: relative;
   h4 {
     margin: 0.5em 0;
   }

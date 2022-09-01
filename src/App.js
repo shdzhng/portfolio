@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import Divider from './static/components/Divder';
 import FadeIn from './static/components/FadeIn';
 import AboutMe from './components/AboutMe';
+import WorkHistory from './components/WorkHistory';
 
 function App() {
   useEffect(() => {
@@ -34,12 +35,19 @@ function App() {
       </h1>
       <ProjectDisplay />
       <Divider />
+
+      <FadeIn>
+        <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Work History </h1>
+        <WorkHistory />
+      </FadeIn>
+
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
           References
         </h1>
         <ReferenceSlider />
       </FadeIn>
+
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
         <Timeline id="education-timeline" />

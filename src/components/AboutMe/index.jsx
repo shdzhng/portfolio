@@ -77,6 +77,7 @@ function AboutMe() {
           borderRadius: '1em 1em 1em 1em',
         }}
       >
+        <div id="banner" />
         <Portrait />
         <TechstackContainer>
           <h3>Technology</h3>
@@ -153,8 +154,8 @@ function AboutMe() {
             .
             <span className="emphasis">
               {' '}
-              I was so impressed by how technology had empowered the museum to
-              break free of its location constraints to reach folks far and wide
+              I was so impressed by how technology empowered the museum to break
+              free of its location constraints to reach folks far and wide
             </span>
             , that I decided to make the leap of faith.
           </p>

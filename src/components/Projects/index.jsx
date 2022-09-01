@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import projectData from '../../static/projectData';
+import projectData from '../../static/data/projectData';
 import { Container, SideBarItem, SideBar } from './projects.styles';
 import ProjectContainer from './ProjectContainer';
 function ProjectDisplay() {

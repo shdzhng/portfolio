@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
-import { educationData } from '../../static/data';
 import {
   TimeLine,
   TimelineContainer,
   ContentContainer,
 } from './timeline.styles';
 import DataCard from './DataCard';
+import educationData from '../../static/data/educationData';
 
 function Timeline() {
   return (
