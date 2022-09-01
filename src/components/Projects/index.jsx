@@ -10,7 +10,7 @@ function ProjectDisplay() {
   };
 
   return (
-    <Container>
+    <Container id="projects">
       <SideBar>
         {projectData.map((project, i) => (
           <SideBarItem

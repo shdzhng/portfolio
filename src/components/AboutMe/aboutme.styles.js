@@ -1,18 +1,30 @@
 import styled, { keyframes } from 'styled-components';
 import headshot from './img/headshot.jpg';
 import plantsvg from './img/plant.svg';
+import polkadot from './img/polkadot.svg';
 import { colors } from '../../static/colors.js';
+import { Link } from 'react-scroll';
 
+//animations
 const slideUp728pxup = keyframes`
  from { opacity: 0, right: -4.5em;
       top: 0rem;}
  to { opacity: 1;top: -2.75em;right: -4.5em}
 `;
-
-const slideUp728pxdown = keyframes`
- from { opacity: 0, right: -4.5em;
-      top: 0rem;}
- to { opacity: 1;top: -3.75em;right: -4.5em}
+const waveHand = keyframes`
+from{
+    transform: rotate(10deg);
+}to{
+    transform: rotate(60deg);
+}`;
+const backgroundImageZoom = keyframes`
+from{
+background-size: 210%;
+  background-position-y: -200px;
+}to{
+    background-size: 220%;
+      background-position-y: -240px;
+}
 `;
 
 const IconGroup = styled.div`
@@ -34,49 +46,115 @@ const IconContainer = styled.a`
   }
 `;
 
-const backgroundImageZoom = keyframes`
-from{
-background-size: 210%;
-  background-position-y: -151px;
-}to{
-    background-size: 220%;
-      background-position-y: -150px;
-}
-`;
-
 const Portrait = styled.div`
   height: 300px;
-  width: 200px;
-  border-radius: 1em;
+  width: 100%;
+  border-radius: 1em 1em 0em 0em;
   background-image: url(${headshot});
   background-size: 220%;
   background-position-x: 0px;
-  background-position-y: -150px;
+  background-position-y: -240px;
   background-repeat: no-repeat;
   animation: ${backgroundImageZoom} 1000ms ease;
+  @media screen and (max-width: 728px) {
+    animation: none;
+    height: 400px;
+    background-size: 210%;
+    background-position-y: -330px;
+  }
+  @media screen and (max-width: 550px) {
+    height: 300px;
+    background-size: 210%;
+    background-position-y: -250px;
+  }
+  @media screen and (max-width: 350px) {
+    height: 200px;
+    background-size: 210%;
+    background-position-y: -150px;
+  }
 `;
 
-const waveHand = keyframes`
-from{
-    transform: rotate(10deg);
-}to{
-    transform: rotate(60deg);
-}`;
+const LeftContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-basis: 23%;
+`;
+
+const TechstackContainer = styled.div`
+  background-color: ${colors.mediumBlue1};
+  border-radius: 0em 0em 1em 1em;
+  height: 100%;
+  flex-shrink: 10;
+  display: flex;
+  flex-direction: column;
+  color: ${colors.offWhite};
+  #filler {
+    margin-top: 1em;
+    border-radius: 0em 0em 1em 1em;
+    background-color: ${colors.offWhite};
+    mask-image: url(${polkadot});
+    mask-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-grow: 1;
+  }
+  h3 {
+    margin: 5px;
+    flex-basis: 20%;
+    text-align: center;
+    position: relative;
+  }
+  ul {
+    margin: 5px;
+    display: flex;
+    justify-self: flex-start;
+    flex-direction: column;
+    padding-left: 0.5em;
+    flex-grow: 0;
+    list-style-type: none;
+    min-width: 250px;
+    li {
+      font-weight: 500;
+      &:before {
+        content: '🚀 ';
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    ul {
+      margin-bottom: 2em;
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    #filler {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    h3 {
+      margin-top: 1em;
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+`;
 
 const AboutMeContainer = styled.div`
   margin-top: 2em;
   padding: 2em;
   border-radius: 2em;
   border: 4px dotted ${colors.darkBlue};
-  width: 80%;
-  height: fit-content;
-  background-color: ${colors.lightBlue};
+  width: 60vw;
+  max-height: fit-content;
+  background-color: ${colors.lightBlue}90;
   display: flex;
   line-height: 1.4em;
   gap: 1em;
   justify-content: space-evenly;
   font-weight: 500;
   color: ${colors.black};
+  transition: max-height 1s;
 
   .small-emphasis {
     transition: all 500ms linear;
@@ -93,52 +171,55 @@ const AboutMeContainer = styled.div`
     }
   }
 
-  #name,
-  .big-emphasis {
-    font-weight: 800;
-    background-color: ${colors.yellow};
-  }
-
   &:hover {
     .small-emphasis {
       text-decoration: underline wavy 2px ${colors.offWhite};
     }
   }
 
-  #name {
-    padding: 0 0.25em;
+  @media screen and (max-width: 1200px) {
+    width: 65vw;
+  }
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
   }
 
   @media screen and (max-width: 728px) {
-    flex-direction: column;
     font-size: 0.8em;
     line-height: 1.4em;
+    width: 80vw;
     h1 {
       font-size: 1.2em;
     }
   }
 `;
 
-const ToolTip = styled.span`
-  padding: 0 0.25em;
-  position: relative;
+const StyledLink = styled(Link)`
+  cursor: pointer;
+  font-weight: 800;
+  background-color: ${colors.yellow};
+`;
 
+const ToolTip = styled.span`
+  position: relative;
+  background-color: ${colors.yellow};
   &:hover {
     &:before {
       animation-play-state: running;
       visibility: visible;
       content: '${(props) => (props.message ? props.message : 'no content')}';
       position: absolute;
-      font-size: 0.5em;
+      font-size: 12px;
       font-weight: 500;
       padding: 0.5em;
+      width: 200px;
       border-radius: 1em;
-      width: 260px;
       text-align: center;
-      background-color: white;
-      top: -2.75em;
-      right: -4.5em;
-      animation-name: ${slideUp728pxup};
+      background-color: ${colors.offWhite};
+      top: -3em;
+      right: ${(props) => (props.right ? props.right : '-4.5em')};
+      animation-name: ${(props) =>
+        props.animationWide ? props.animationWide : slideUp728pxup};
       animation-duration: 400ms;
       animation-iteration-count: initial;
       transition: all 500ms ease-in-out;
@@ -148,22 +229,18 @@ const ToolTip = styled.span`
   @media screen and (max-width: 728px) {
     &:hover {
       &:before {
-        animation-name: ${slideUp728pxdown};
-        top: -3.75em;
-        width: 150px;
+        content: none;
+        animation: none;
       }
     }
   }
 `;
 
 const AboutInfo = styled.div`
-  width: 80%;
+  width: 100%;
   height: 100%;
   border-radius: 2em 2em 2em 2em;
   background-color: ${colors.oliveGreen}80;
-  @media screen and (max-width: 728px) {
-    width: 100%;
-  }
 `;
 
 const TextContainer = styled.div`
@@ -172,10 +249,13 @@ const TextContainer = styled.div`
 
 export {
   Portrait,
-  IconContainer,
-  AboutMeContainer,
   AboutInfo,
   IconGroup,
   TextContainer,
+  AboutMeContainer,
+  LeftContainer,
+  TechstackContainer,
+  IconContainer,
   ToolTip,
+  StyledLink,
 };

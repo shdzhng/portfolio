@@ -18,7 +18,7 @@ function App() {
     <div
       className="App"
       style={{
-        width: '100vw',
+        width: '60vw',
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -36,7 +36,7 @@ function App() {
       </FadeIn>
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
-        <Timeline />
+        <Timeline id="education-timeline" />
       </FadeIn>
 
       <Divider />
