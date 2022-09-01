@@ -5,7 +5,11 @@ import {
   AboutMeContainer,
   AboutInfo,
   ToolTip,
+  IconContainer,
+  IconGroup,
 } from './aboutme.styles';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 function AboutMe() {
   return (
@@ -17,14 +21,13 @@ function AboutMe() {
             Hello! My name is{' '}
             <ToolTip message='💡 pronounced like a "tv show"' id="name">
               Shou
-            </ToolTip>
-            👋🏻{' '}
+            </ToolTip>{' '}
           </h1>
           <p>
             I am a self-taught{' '}
             <span className="big-emphasis">Junior Frontend Developer</span>{' '}
             based in
-            <span className="small-emphasis">🌴 Los Angeles 🌴</span> with a
+            <span className="big-emphasis">🌴 Los Angeles 🌴</span> with a
             passion for building engaging web interfaces. I am the type of
             software engineer who likes to think beyond the code, and focus on
             how my code co-create experiences with the users.
@@ -45,17 +48,27 @@ function AboutMe() {
             </span>{' '}
             and interned to conduct:{' '}
             <span className="small-emphasis"> Impact Evaluation</span>, and{' '}
-            <span className="small-emphasis">Exhibiton Research</span>.
+            <span className="small-emphasis">Exhibiton Research</span>. As you
+            might be able to tell, I am someone who loves to get deeply involved
+            and see all aspects of an organizations operation! I'd love to
+            collaborate closely with UX/UI researchers to drive key decisions.
           </p>
           <br />
-          <p>
-            As you might be able to tell, I am someone who loves to get deeply
-            involved and see all aspects of an organizations operation!
-          </p>
 
-          <h3>Check out my published blog pieces on Cultural and Heritage!</h3>
+          <p>Check out my published blog pieces on Cultural and Heritage!</p>
 
-          <p></p>
+          <IconGroup>
+            <IconContainer
+              target="_blank"
+              href="https://www.linkedin.com/in/shouzhang/"
+            >
+              <LinkedInIcon style={{ fontSize: 'inherit' }} />
+            </IconContainer>
+
+            <IconContainer target="_blank" href="https://github.com/shdzhng">
+              <GitHubIcon style={{ fontSize: 'inherit' }} />
+            </IconContainer>
+          </IconGroup>
         </TextContainer>
       </AboutInfo>
     </AboutMeContainer>

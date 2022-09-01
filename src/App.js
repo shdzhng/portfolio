@@ -23,39 +23,23 @@ function App() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        margin: '0 auto',
       }}
     >
-      {/* <Header /> */}
-      {/* <div>
-        <svg width="100%" height="100%" fill={colors.oliveGreen}>
-          <text x="50%" y="70%" textAnchor="middle" className={'animate-text'}>
-            Shou Zhang
-          </text>
-        </svg>
-      </div> */}
+      <AboutMe />
+      <h1 style={{ margin: '1em 0', textAlign: 'center' }}> My Projects</h1>
+      <ProjectDisplay />
+      <Divider />
+      <FadeIn>
+        <h1 style={{ margin: '1em 0', textAlign: 'center' }}> References</h1>
+        <ReferenceSlider />
+      </FadeIn>
+      <FadeIn>
+        <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
+        <Timeline />
+      </FadeIn>
 
-      <div
-        style={{
-          margin: '0 auto',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <AboutMe />
-        <ProjectDisplay />
-        <Divider />
-        <FadeIn>
-          <ReferenceSlider />
-        </FadeIn>
-        <FadeIn>
-          <Timeline />
-        </FadeIn>
-
-        <Divider />
-      </div>
-      {/* <Footer /> */}
+      <Divider />
     </div>
   );
 }

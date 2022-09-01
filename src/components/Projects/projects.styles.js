@@ -6,10 +6,10 @@ const Container = styled.div`
   right: 130px;
   margin-top: 2em;
   width: 75vw;
-  min-height: 65vh;
   height: fit-content;
   display: inline-flex;
   position: relative;
+  transition: all 100ms ease;
   @media screen and (max-width: 728px) {
     flex-direction: column;
     width: 90vw;
@@ -53,8 +53,8 @@ const GridItem = styled(animated.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 2em;
-  height: 100%;
+  padding: 0 2em 2em 2em;
+  height: fit-content;
   overflow-y: auto;
   overflow-x: hidden;
   width: 90%;
