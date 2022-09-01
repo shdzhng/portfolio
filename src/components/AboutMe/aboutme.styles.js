@@ -20,10 +20,10 @@ from{
 const backgroundImageZoom = keyframes`
 from{
 background-size: 210%;
-  background-position-y: -200px;
+  background-position-y: -220px;
 }to{
     background-size: 220%;
-      background-position-y: -240px;
+      background-position-y: -230px;
 }
 `;
 
@@ -34,12 +34,16 @@ const IconGroup = styled.div`
 `;
 
 const IconContainer = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2em;
   padding: 0.25em;
   background-color: ${colors.darkBlue};
   border-radius: 0.5em;
   color: ${colors.offWhite};
   transition: all 400ms ease;
+  text-decoration: none;
   &:hover {
     background-color: ${colors.offWhite};
     color: ${colors.darkBlue};
@@ -53,11 +57,11 @@ const Portrait = styled.div`
   background-image: url(${headshot});
   background-size: 220%;
   background-position-x: 0px;
-  background-position-y: -240px;
+  background-position-y: -230px;
   background-repeat: no-repeat;
   animation: ${backgroundImageZoom} 1000ms ease;
-  @media screen and (max-width: 728px) {
-    animation: none;
+
+  @media screen and (max-width: 1100px) {
     height: 400px;
     background-size: 210%;
     background-position-y: -330px;
@@ -123,7 +127,6 @@ const TechstackContainer = styled.div`
   }
   @media screen and (max-width: 500px) {
     ul {
-      margin-bottom: 2em;
       display: grid;
       grid-template-columns: auto auto;
     }
@@ -138,6 +141,14 @@ const TechstackContainer = styled.div`
       padding: 0;
     }
   }
+  @media screen and (max-width: 1200px) {
+    #filler {
+      display: none;
+    }
+    ul {
+      margin-bottom: 2em;
+    }
+  }
 `;
 
 const AboutMeContainer = styled.div`
@@ -146,20 +157,47 @@ const AboutMeContainer = styled.div`
   border-radius: 2em;
   border: 4px dotted ${colors.darkBlue};
   width: 60vw;
-  max-height: fit-content;
+  height: 100vh;
   background-color: ${colors.lightBlue}90;
   display: flex;
-  line-height: 1.4em;
+  line-height: 1.3em;
   gap: 1em;
   justify-content: space-evenly;
-  font-weight: 500;
+  font-weight: 400;
   color: ${colors.black};
   transition: max-height 1s;
 
-  .small-emphasis {
-    transition: all 500ms linear;
-    text-decoration: underline wavy 2px ${colors.offWhite}00;
-    text-underline-offset: 4px;
+  h4 {
+    margin: 0.5em 0;
+  }
+
+  #matterport-link {
+    color: ${colors.darkBlue};
+    font-weight: 500;
+    &:link {
+      color: ${colors.darkGreen};
+    }
+    &:visited {
+      color: ${colors.darkGreen};
+    }
+  }
+
+  p {
+    margin-bottom: 0.7em;
+  }
+
+  .emphasis {
+    color: ${(props) => (props.show ? colors.black : 'transparent')};
+    font-weight: 700;
+    background-position: right;
+    background-size: ${(props) => (props.show ? '0% 100%' : '100% 100%')};
+    background-color: ${(props) => (props.show ? colors.yellow + 80 : 'none')};
+    background-image: linear-gradient(${colors.darkGreen}, ${colors.darkGreen});
+    background-repeat: no-repeat;
+    transition-property: background-size, background-color, color;
+    transition-duration: 500ms, 300ms, 300ms;
+    transition-delay: 0s, 500ms, 200ms;
+    transition-timing-function: ease-in-out;
   }
 
   h1 {
@@ -171,17 +209,10 @@ const AboutMeContainer = styled.div`
     }
   }
 
-  &:hover {
-    .small-emphasis {
-      text-decoration: underline wavy 2px ${colors.offWhite};
-    }
-  }
-
   @media screen and (max-width: 1200px) {
     width: 65vw;
-  }
-  @media screen and (max-width: 1200px) {
     flex-direction: column;
+    height: fit-content;
   }
 
   @media screen and (max-width: 728px) {
@@ -196,7 +227,6 @@ const AboutMeContainer = styled.div`
 
 const StyledLink = styled(Link)`
   cursor: pointer;
-  font-weight: 800;
   background-color: ${colors.yellow};
 `;
 
@@ -241,6 +271,7 @@ const AboutInfo = styled.div`
   height: 100%;
   border-radius: 2em 2em 2em 2em;
   background-color: ${colors.oliveGreen}80;
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
 `;
 
 const TextContainer = styled.div`

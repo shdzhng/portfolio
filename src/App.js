@@ -27,11 +27,17 @@ function App() {
       }}
     >
       <AboutMe />
-      <h1 style={{ margin: '1em 0', textAlign: 'center' }}> My Projects</h1>
+
+      <h1 id="projects" style={{ margin: '1em 0', textAlign: 'center' }}>
+        {' '}
+        My Projects
+      </h1>
       <ProjectDisplay />
       <Divider />
       <FadeIn>
-        <h1 style={{ margin: '1em 0', textAlign: 'center' }}> References</h1>
+        <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
+          References
+        </h1>
         <ReferenceSlider />
       </FadeIn>
       <FadeIn>
