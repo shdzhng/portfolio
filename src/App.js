@@ -1,7 +1,4 @@
 import Timeline from './components/Timeline';
-import { colors } from './static/colors';
-import Footer from './components/Footer';
-import Header from './components/Header';
 import ReferenceSlider from './components/ReferenceSlider';
 import ProjectDisplay from './components/Projects';
 import { useEffect } from 'react';
@@ -27,33 +24,28 @@ function App() {
         margin: '0 auto',
       }}
     >
-      <AboutMe />
-
-      <h1 id="projects" style={{ margin: '1em 0', textAlign: 'center' }}>
-        {' '}
-        My Projects
-      </h1>
-      <ProjectDisplay />
+      <AboutMe /> 
+      <FadeIn>
+        <h1 id="projects" style={{ margin: '1em 0', textAlign: 'center' }}>
+          My Projects
+        </h1>
+        <ProjectDisplay />
+      </FadeIn>
       <Divider />
-
       <FadeIn>
         <h1 id="whereibeen" style={{}}>
           Where I've <span />
         </h1>
         <WorkHistory />
       </FadeIn>
-
       <Divider />
-
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
           References
         </h1>
         <ReferenceSlider />
       </FadeIn>
-
       <Divider />
-
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
         <Timeline id="education-timeline" />

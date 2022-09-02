@@ -12,6 +12,33 @@ body {
   scroll-behavior: smooth;
 }
 
+#down-btn {
+  color: #faf8ed;
+  background-color: #283618;
+  padding: 0.5em;
+  border-radius: 2em;
+  font-size: 2em;
+  cursor: pointer;
+  animation: jump 1000ms ease-in-out alternate infinite;
+  animation-play-state: paused;
+  bottom: 0.5em;
+}
+
+#down-btn:hover {
+  background-color: #606c38;
+  animation-play-state: running;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
 #whereibeen {
   margin: 1em 0;
   text-align: center;

@@ -42,7 +42,7 @@ const ProjectContainer = ({ project }) => {
         ) : null}
       </ModalBackground>
 
-      <PolkaFlex>
+      <PolkaFlex id="project-container">
         <GridItem>
           <Heading>{name}</Heading>
           <SectionContainer>

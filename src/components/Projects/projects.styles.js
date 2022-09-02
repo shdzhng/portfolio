@@ -14,11 +14,11 @@ const Container = styled.div`
   transition: all 100ms ease;
   @media screen and (max-width: 728px) {
     flex-direction: column;
-    width: 90vw;
     align-items: center;
     gap: 1em;
     min-height: 60vh;
     margin: 0;
+    left: 0;
   }
 `;
 const ModalBackground = styled.div`
@@ -58,6 +58,7 @@ const GridItem = styled(animated.div)`
   max-height: fit-content;
   overflow-y: auto;
   overflow-x: hidden;
+  width: 100%;
   z-index: 2;
   transition: all 500ms ease;
   color: ${colors.offWhite};
@@ -106,17 +107,24 @@ const PolkaFlex = styled.div`
   background-color: ${colors.offBlue};
   border-radius: 3em 1em 1em 3em;
   height: 100%;
-  width: 70vw;
+  width: 65vw;
+  margin: 0 auto;
   display: flex;
   color: ${colors.offWhite};
   #filler {
     margin-top: 1em;
     background-color: ${colors.offWhite};
     mask-image: url(${polkadot});
-    mask-size: 600%;
+    mask-size: 200%;
     position: relative;
     flex-grow: 1;
-    flex-basis: 35%;
+    flex-basis: 30%;
+  }
+  @media screen and (max-width: 1200px) {
+    width: 100vw;
+  }
+  @media screen and (max-width: 728px) {
+    width: 80vw;
   }
 `;
 
@@ -215,7 +223,6 @@ const SideBar = styled.div`
   @media screen and (max-width: 728px) {
     flex-direction: row;
     animation: none;
-    position: static;
   }
 `;
 
@@ -227,6 +234,7 @@ const SideBarItem = styled.div`
   left: ${(props) => (props.active ? '3em' : '4em')};
   font-weight: ${(props) => (props.active ? 600 : 500)};
   font-size: 0.8em;
+  top: -5em;
   color: ${(props) => (props.active ? colors.offWhite : colors.oliveGreen)};
   width: 200px;
   height: 18px;
@@ -248,14 +256,14 @@ const SideBarItem = styled.div`
   }
   @media screen and (max-width: 728px) {
     color: ${colors.darkBlue}00;
-    width: 1em;
+    width: 0.5em;
     height: 0.75em;
-    left: 0;
+    left: -2em;
     overflow-x: none;
     &:hover,
     &:active {
       color: ${colors.darkBlue}00;
-      left: 0;
+      left: -2em;
     }
     &:before {
       display: none;

@@ -174,6 +174,7 @@ const employmentData = {
     },
     {
       name: 'Okayama University',
+      longName: 'Okayama University',
       start: '11/2016',
       end: '01/2027',
       location: 'Okayama, Japan',

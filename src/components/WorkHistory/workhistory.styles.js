@@ -16,6 +16,7 @@ const ContentContainer = styled.div`
   #location,
   #duration {
     align-self: center;
+    margin: 0;
   }
   #positions-ul {
     list-style: none;
@@ -30,14 +31,13 @@ const ContentContainer = styled.div`
     font-weight: 600;
   }
   #positions-ul ul {
-    padding-left: 1em;
+    padding-left: 0;
     display: flex;
     flex-direction: column;
     gap: 0.25em;
   }
 
   #positions-ul li ul li {
-    list-style: none;
     padding-left: -5px;
     &:before {
       content: '🌼';
@@ -45,8 +45,25 @@ const ContentContainer = styled.div`
     }
   }
 
-  #positions-ul li ul li {
-    &:before {
+  @media screen and (max-width: 728px) {
+    #name {
+      font-weight: 600;
+      font-size: 1em;
+    }
+    #location,
+    #duration {
+      font-size: 0.9em;
+    }
+
+    #positions-ul p,
+    #skills-header {
+      font-weight: 400;
+      font-size: 1em;
+    }
+
+    #positions-ul li ul li,
+    #skills-ul span {
+      font-size: 0.8em;
     }
   }
 `;
@@ -54,7 +71,7 @@ const ContentContainer = styled.div`
 const JobContainer = styled.div`
   background-color: ${colors.lightBlue};
   position: relative;
-  max-height: ${({ show }) => (show ? '40em' : '3em')};
+  max-height: ${({ show }) => (show ? '80em' : '3em')};
   margin-bottom: 2em;
   visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
   overflow: hidden;
@@ -72,15 +89,12 @@ const JobContainer = styled.div`
     visibility: visible;
     height: 3em;
     font-size: 1em;
-    position: static;
     font-weight: 700;
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
     border-radius: 1em 1em 0 0;
     width: 100%;
     background-color: ${colors.darkBlue};
     color: ${colors.offWhite};
-    top: 0em;
-    right: 0em;
     content: '${({ trueHeader }) => trueHeader}';
     display: flex;
     align-items: center;
@@ -89,6 +103,22 @@ const JobContainer = styled.div`
   &:not(:last-child) {
     margin-bottom: 1em;
   }
+  @media screen and (max-width: 728px) {
+    &:before {
+      font-size: 1em;
+      height: 3em;
+    }
+  }
 `;
 
-export { JobContainer, ContentContainer };
+const JobsContainer = styled.div`
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  @media screen and (max-width: 728px) {
+    flex-direction: column;
+  }
+`;
+
+export { JobContainer, JobsContainer, ContentContainer };
