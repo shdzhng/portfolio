@@ -57,10 +57,6 @@ const CustomToolTip = ({ top, right, message, ...props }) => {
 function AboutMe() {
   const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    console.log(show);
-  }, [show]);
-
   return (
     <AboutMeContainer
       onMouseEnter={() => {
@@ -77,13 +73,16 @@ function AboutMe() {
           borderRadius: '1em 1em 1em 1em',
         }}
       >
-        <div id="banner" />
+        <div
+          id="banner"
+          onClick={() => (window.location = 'mailto:shoud.zhang@gmail.com')}
+        />
         <Portrait />
         <TechstackContainer>
           <h3>Technology</h3>
           <ul>
-            {TECHNOLOGIES.map((tech) => (
-              <li>{tech}</li>
+            {TECHNOLOGIES.map((tech, i) => (
+              <li key={i}>{tech}</li>
             ))}
           </ul>
           <span id="filler" />

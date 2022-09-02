@@ -13,7 +13,7 @@ const slideUp728pxup = keyframes`
 `;
 const waveHand = keyframes`
 from{
-    transform: rotate(10deg);
+    transform: rotate(30deg);
 }to{
     transform: rotate(60deg);
 }`;
@@ -100,11 +100,12 @@ const LeftContainer = styled.div`
     &:hover {
       animation-play-state: paused;
       &:before {
-        content: '#Yes!';
+        content: 'Click to Email';
       }
     }
     &:before,
     &:after {
+      cursor: pointer;
       position: absolute;
     }
     &:before {
@@ -253,7 +254,7 @@ const AboutMeContainer = styled.div`
     &:after {
       position: absolute;
       content: '👋🏻';
-      animation: ${waveHand} 1000ms ease-out alternate infinite;
+      animation: ${waveHand} 2s ease-out alternate infinite;
     }
   }
 

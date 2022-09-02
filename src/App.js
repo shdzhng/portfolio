@@ -41,12 +41,16 @@ function App() {
         <WorkHistory />
       </FadeIn>
 
+      <Divider />
+      
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
           References
         </h1>
         <ReferenceSlider />
       </FadeIn>
+
+      <Divider />
 
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
