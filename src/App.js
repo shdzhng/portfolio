@@ -37,12 +37,14 @@ function App() {
       <Divider />
 
       <FadeIn>
-        <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Work History </h1>
+        <h1 id="whereibeen" style={{}}>
+          Where I've <span />
+        </h1>
         <WorkHistory />
       </FadeIn>
 
       <Divider />
-      
+
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
           References
@@ -56,8 +58,6 @@ function App() {
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
         <Timeline id="education-timeline" />
       </FadeIn>
-
-      <Divider />
     </div>
   );
 }

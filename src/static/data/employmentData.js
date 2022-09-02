@@ -1,74 +1,25 @@
 const employmentData = {
-  hospitality: [
-    {
-      name: 'Kemuri Japanese Baru',
-      start: '11/2015',
-      end: '05/2016',
-      location: 'Redwood City, CA',
-      positions: [
-        {
-          title: 'Server',
-          type: 'Part Time',
-          responsibility: [
-            'Served guest Michelin Star quality customer service in heart of the Silicon Valley.',
-          ],
-        },
-      ],
-      skills: ['Point of Sale System (POS)', 'Customer Service'],
-    },
-    {
-      name: 'Azual Hospitality Group',
-      start: '09/2017',
-      end: '12/2017',
-      location: 'Palo Alto, CA',
-      positions: [
-        {
-          title: 'Front Desk Agent',
-          type: 'Part Time',
-          responsibility: [
-            'Greeted guests and handled all guest inquiries and requests.',
-            'Upsold stays with food, beverage, and room upgrade options.',
-          ],
-        },
-      ],
-      skills: ['Central Reservation System (CRS)', 'Customer Service'],
-    },
-    {
-      name: 'American Cruise Lines',
-      start: '03/2018',
-      end: '04/2018',
-      location: 'Mississippi River',
-      positions: [
-        {
-          title: 'Cruise Steward',
-          type: 'Internship',
-          responsibility: [
-            'Surpassed expectations of tables covered and demonstrated ability to identify slow areas, prioritize and flexibly assist where needed.',
-            'Served guests on-board the America (185 guest capacity) in a hybrid banquet setting.',
-          ],
-        },
-      ],
-      skills: ['Teamwork', 'Adaptability', 'Customer Service'],
-    },
-  ],
   cultural: [
     {
-      name: 'Chinese Historical Society of America',
+      name: 'CHSA Museum',
+      longName: 'Chinese Historical Society of America Museum',
       start: '02/2021',
       end: '10/2021',
       location: 'San Francisco, CA',
       positions: [
         {
-          title: 'Education and Programs Coordinator',
+          title: '🧑🏻‍💼 Coordinator',
+          longTitle: 'Education and Programs Coordinator',
           type: 'FT Contactor',
           responsibility: [
             'Spearheaded online programs collaboratively with stakeholders with short turn arounds, and improved program engagement by 23%.',
-            'Facilitated the integration of an outgoing exhibition into Matterport and developed its virtual tour.',
+            'Facilitated the integration of an outgoing exhibition <a target="__blank" href="https://chsa.org/virtual-tour-of-chinese-american-exclusion-inclusion/">Chinese American: Exclusion/Inclusion </a>into Matterport and developed its virtual tour.',
             'Coordinated volunteers and intern at online and in-person events.',
           ],
         },
         {
-          title: 'Education and Programs Coordinator',
+          title: 'Exhibition Research Intern',
+          longTitle: 'Exhibition Research Intern',
           type: 'Internship',
           responsibility: [
             'Conducted the data collection, analysis, and visualization of material for the We Are Bruce Lee exhibition and directly informed the exhibit curators’ design of the exhibition.',
@@ -85,12 +36,14 @@ const employmentData = {
     },
     {
       name: 'Smithsonian CFCH',
+      longName: 'Smithsonian Center for Folklife and Cultural Heritage',
       start: '07/2019',
       end: '12/2019',
       location: 'Washington, DC',
       positions: [
         {
-          title: 'Cultural Sustainability Research Intern',
+          title: '🧑🏻‍🏫 Research Intern',
+          longTitle: 'Cultural Sustainability Research Intern',
           type: 'Internship',
           responsibility: [
             'Strengthened the organizations impact evaluation framework by providing write-up instructions for quantitative studies',
@@ -106,16 +59,74 @@ const employmentData = {
         'ATLAS.ti',
       ],
     },
+    {
+      name: 'Kemuri Japanese Baru',
+      longName: 'Kemuri Japanese Baru',
+      start: '11/2015',
+      end: '05/2016',
+      location: 'Redwood City, CA',
+      positions: [
+        {
+          title: '🤵🏻 Server',
+          longTitle: 'Server (Part Time)',
+          type: 'Part Time',
+          responsibility: [
+            'Served guest Michelin Star quality customer service in heart of the Silicon Valley.',
+          ],
+        },
+      ],
+      skills: ['Point of Sale System (POS)', 'Customer Service'],
+    },
+    {
+      name: 'Azul Hospitality Group',
+      longName: 'Azul Hospitality Group',
+      start: '09/2017',
+      end: '12/2017',
+      location: 'Palo Alto, CA',
+      positions: [
+        {
+          title: '🏨 Front Desk Agent',
+          longTitle: 'Front Desk Agent (Part Time)',
+          type: 'Part Time',
+          responsibility: [
+            'Greeted guests and handled all guest inquiries and requests.',
+            'Upsold stays with food, beverage, and room upgrade options.',
+          ],
+        },
+      ],
+      skills: ['Central Reservation System (CRS)', 'Customer Service'],
+    },
+    {
+      name: 'American Cruise Lines',
+      longName: 'American Cruise Lines',
+      start: '03/2018',
+      end: '04/2018',
+      location: 'Mississippi River',
+      positions: [
+        {
+          title: '🛳️ Cruise Steward',
+          longTitle: 'Cruise Steward (Full Time)',
+          type: 'Internship',
+          responsibility: [
+            'Surpassed expectations of tables covered and demonstrated ability to identify slow areas, prioritize and flexibly assist where needed.',
+            'Served guests on-board the America (185 guest capacity) in a hybrid banquet setting.',
+          ],
+        },
+      ],
+      skills: ['Teamwork', 'Adaptability', 'Customer Service'],
+    },
   ],
   volunteer: [
     {
       name: 'Little Tokyo Service Center',
+      longName: 'Little Tokyo Service Center',
       start: '09/2020',
       end: '08/2021',
       location: 'Los Angeles, CA',
       positions: [
         {
-          title: 'Little Tokyo Eats Volunteer',
+          title: '🥡 LT Eats Delivery',
+          longTitle: 'LT Eats Delivery Volunteer',
           type: 'Volunteer',
           responsibility: [
             'Delivered community subsidized COVID19 relief meals from Little Tokyo restaurants to seniors and low income households in the neighborhood twice a week',
@@ -126,12 +137,14 @@ const employmentData = {
     },
     {
       name: 'David Kim for Congress (2020)',
+      longName: 'David Kim for Congress (2020)',
       start: '07/2020',
       end: '11/2020',
       location: 'Los Angeles, CA',
       positions: [
         {
-          title: 'Email Communication Coordinator',
+          title: '📮 Email Coordinator',
+          longTitle: 'Email Communication Coordinator (Volunteer)',
           type: 'Volunteer',
           responsibility: [
             'Maintained and trimed constituent contact list, pruned inactive contact and improved email click count by 9% and bounce rate by 20%',
@@ -142,13 +155,15 @@ const employmentData = {
       skills: ['Microsoft Excel'],
     },
     {
-      name: 'Alliance for the restoration of Cultural Heritage',
+      name: 'ARCH',
+      longName: 'Alliance for the Restoration of Cultural Heritage',
       start: '11/2019',
       end: '02/2020',
       location: 'Washington, DC',
       positions: [
         {
-          title: 'Project Coordinator',
+          title: '🗂 Project Coordinator',
+          longTitle: 'Citizen Historian Project Coordinator (Volunteer)',
           type: 'Volunteer',
           responsibility: [
             'Assisted in the revitalization of an online network project (Citizen Historian) to facilitate the knowledge sharing of local history experts across the globe.',
@@ -164,7 +179,8 @@ const employmentData = {
       location: 'Okayama, Japan',
       positions: [
         {
-          title: 'English Tutor Volunteer',
+          title: '🇺🇸 English Tutor',
+          longTitle: 'English Tutor Volunteer',
           type: 'Volunteer',
           responsibility: [
             'Provided free one-on-one English conversation to 2 native Japanese speakers to pass TOEFL. My own experience of English language acquisition positioned me to pass on learning techniques that worked for me.',

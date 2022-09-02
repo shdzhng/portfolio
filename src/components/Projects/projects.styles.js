@@ -1,13 +1,15 @@
 import styled, { keyframes } from 'styled-components';
 import { colors } from '../../static/colors';
 import { animated } from 'react-spring';
+import polkadot from '../AboutMe/img/polkadot.svg';
 
 const Container = styled.div`
   right: 130px;
   margin-top: 2em;
-  width: 75vw;
+  width: 80vw;
   max-height: fit-content;
-  display: inline-flex;
+  display: flex;
+  left: -6em;
   position: relative;
   transition: all 100ms ease;
   @media screen and (max-width: 728px) {
@@ -17,7 +19,6 @@ const Container = styled.div`
     gap: 1em;
     min-height: 60vh;
     margin: 0;
-    right: 0;
   }
 `;
 const ModalBackground = styled.div`
@@ -57,11 +58,10 @@ const GridItem = styled(animated.div)`
   max-height: fit-content;
   overflow-y: auto;
   overflow-x: hidden;
-  width: 90%;
   z-index: 2;
   transition: all 500ms ease;
   color: ${colors.offWhite};
-  border-radius: 1em 3em 3em 1em;
+  border-radius: 2em 0em 0em 2em;
   -webkit-box-shadow: -8px -1px 4px -1px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: -8px -1px 6px -1px rgba(0, 0, 0, 0.26);
   box-shadow: -3px -1px 6px -1px rgba(0, 0, 0, 0.26);
@@ -102,9 +102,26 @@ const GridItem = styled(animated.div)`
   }
 `;
 
+const PolkaFlex = styled.div`
+  background-color: ${colors.offBlue};
+  border-radius: 3em 1em 1em 3em;
+  height: 100%;
+  width: 70vw;
+  display: flex;
+  color: ${colors.offWhite};
+  #filler {
+    margin-top: 1em;
+    background-color: ${colors.offWhite};
+    mask-image: url(${polkadot});
+    mask-size: 600%;
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 35%;
+  }
+`;
+
 const SectionContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
   gap: 1em;
   @media screen and (max-width: 728px) {
     flex-direction: column;
@@ -186,7 +203,7 @@ const SideBar = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 300px;
+  width: 200px;
   margin-top: 2em;
   z-index: 0;
   top: 4em;
@@ -212,11 +229,13 @@ const SideBarItem = styled.div`
   font-size: 0.8em;
   color: ${(props) => (props.active ? colors.offWhite : colors.oliveGreen)};
   width: 200px;
+  height: 18px;
   transition: all 250ms ease;
+
   &:before {
     content: '';
-    width: ${(props) => (props.active ? '0' : '15px')};
-    height: ${(props) => (props.active ? '0' : '15px')};
+    width: ${(props) => (props.active ? '0' : '16px')};
+    height: ${(props) => (props.active ? '0' : '16px')};
     background-color: ${colors.offWhite};
     position: absolute;
     transform: translateX(-35px) rotate(45deg);
@@ -258,4 +277,5 @@ export {
   ModalBackground,
   SectionContainer,
   ModalContent,
+  PolkaFlex,
 };

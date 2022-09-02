@@ -25,7 +25,7 @@ const projectData = [
     },
   },
   {
-    name: 'Bruce Lee Inspo Tree',
+    name: 'Bruce Lee Tree',
     description:
       "A digital exhibit of my research findings (during my time as a museum professional) into Bruce Lee's philosophical inspirations to reveal the network of ideas and people that shaped Bruce Lee's attitude and outlook on life, success, martial arts and how he went on to inspire generations to come.",
     highlights: [

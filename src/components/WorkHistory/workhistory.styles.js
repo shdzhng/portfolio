@@ -10,9 +10,10 @@ const ContentContainer = styled.div`
   font-weight: 300;
   #name {
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.25em;
     align-self: center;
   }
+  #location,
   #duration {
     align-self: center;
   }
@@ -37,16 +38,15 @@ const ContentContainer = styled.div`
 
   #positions-ul li ul li {
     list-style: none;
-    position: relative;
+    padding-left: -5px;
     &:before {
       content: '🌼';
-      margin-right: 0.5em;
+      margin: 0 5px 0 -22px;
     }
   }
 
   #positions-ul li ul li {
     &:before {
-      float: left;
     }
   }
 `;
@@ -55,6 +55,7 @@ const JobContainer = styled.div`
   background-color: ${colors.lightBlue};
   position: relative;
   max-height: ${({ show }) => (show ? '40em' : '3em')};
+  margin-bottom: 2em;
   visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
   overflow: hidden;
   border-radius: 1em;
@@ -80,7 +81,7 @@ const JobContainer = styled.div`
     color: ${colors.offWhite};
     top: 0em;
     right: 0em;
-    content: '${({ trueHeader, falseHeader, show }) => trueHeader}';
+    content: '${({ trueHeader }) => trueHeader}';
     display: flex;
     align-items: center;
     justify-content: center;

@@ -6,9 +6,17 @@ function FadeIn(props) {
   const domRef = React.useRef();
 
   React.useEffect(() => {
+    let options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0,
+    };
+
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
-    });
+      entries.forEach((entry) => {
+        setVisible(entry.isIntersecting);
+      });
+    }, options);
     observer.observe(domRef.current);
   }, []);
 

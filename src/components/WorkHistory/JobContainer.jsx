@@ -3,7 +3,8 @@ import { JobContainer, ContentContainer } from './workhistory.styles';
 
 const Container = ({ job, type }, i) => {
   const [show, setShow] = useState(false);
-  const { name, end, start, location, skills, positions } = job;
+  const { name, longName, end, start, location, skills, positions, longTitle } =
+    job;
 
   const handleToggle = () => {
     setShow((prev) => !prev);
@@ -15,24 +16,24 @@ const Container = ({ job, type }, i) => {
         handleToggle();
       }}
       show={show}
-      trueHeader={`${positions[0].title} (${name})`}
-      falseHeader={`${name} | ${location}`}
+      trueHeader={`${positions[0].title} @ ${name}`}
       key={i}
     >
       <ContentContainer variant={type}>
-        <p id="name">
-          {name} | {location}
+        <p id="name">{longName}</p>
+        <p id="location">
+          {location} | {`${start} - ${end}`}
         </p>
-        <p id="duration">{`${start} - ${end}`}</p>
         <ul id="positions-ul">
-          {positions.map(({ title, type, responsibility }) => (
+          {positions.map(({ title, longTitle, type, responsibility }) => (
             <li key={title + type}>
-              <p>
-                {title} ({type})
-              </p>
+              <p>{longTitle}</p>
               <ul>
-                {responsibility.map((thing, i) => (
-                  <li key={thing + i}>{thing}</li>
+                {responsibility.map((task, i) => (
+                  <li
+                    key={task + i}
+                    dangerouslySetInnerHTML={{ __html: task }}
+                  ></li>
                 ))}
               </ul>
             </li>

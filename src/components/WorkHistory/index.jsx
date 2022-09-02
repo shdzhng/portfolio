@@ -3,7 +3,7 @@ import employmentData from '../../static/data/employmentData';
 import Container from './JobContainer';
 
 function WorkHistory() {
-  const { hospitality, cultural, volunteer } = employmentData;
+  const { cultural, volunteer } = employmentData;
 
   const renderJob = (job, i, type) => {
     return <Container job={job} type={type} key={i} />;
@@ -12,25 +12,21 @@ function WorkHistory() {
   return (
     <div
       style={{
-        width: '60vw',
+        width: '80vw',
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
+        gap: '1em',
       }}
     >
-      <>
-        <h3>Cultural</h3>
-        <div>{cultural.map((job, i) => renderJob(job, i, 'cultural'))}</div>
-      </>
-      <>
-        <h3>Hospitality</h3>
-        <div>
-          {hospitality.map((job, i) => renderJob(job, i, 'hospitality'))}
-        </div>
-      </>
-      <>
-        <h3>Volunteering</h3>
-        <div>{volunteer.map((job, i) => renderJob(job, i, 'volunteer'))}</div>
-      </>
+      <div>
+        <h2 style={{ textAlign: 'center' }}>Worked</h2>
+        {cultural.map((job, i) => renderJob(job, i, 'cultural'))}
+      </div>
+
+      <div>
+        <h2 style={{ textAlign: 'center' }}>Volunteered</h2>
+        {volunteer.map((job, i) => renderJob(job, i, 'volunteer'))}
+      </div>
     </div>
   );
 }
