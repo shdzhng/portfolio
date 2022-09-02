@@ -61,20 +61,25 @@ const Portrait = styled.div`
   background-repeat: no-repeat;
   animation: ${backgroundImageZoom} 1000ms ease;
   z-index: 5;
-  @media screen and (max-width: 1100px) {
+
+  @media screen and (max-width: 1200px) {
+    height: 600px;
+    background-size: 210%;
+    background-position-y: -700px;
+  }
+
+  @media screen and (max-width: 900px) {
     height: 400px;
-    background-size: 210%;
-    background-position-y: -330px;
+    background-position-y: -450px;
   }
-  @media screen and (max-width: 550px) {
+
+  @media screen and (max-width: 500px) {
     height: 300px;
-    background-size: 210%;
-    background-position-y: -250px;
+    background-position-y: -380px;
   }
-  @media screen and (max-width: 350px) {
-    height: 200px;
-    background-size: 210%;
-    background-position-y: -150px;
+
+  @media screen and (max-width: 400px) {
+    background-position-y: -230px;
   }
 `;
 
