@@ -26,9 +26,8 @@ background-size: 210%;
       background-position-y: -230px;
 }
 `;
-
-const windblowing = keyframes`    from {transform:rotate(-78deg); }
-       to {transform:rotate(-90deg);}`;
+const windblowing = keyframes`
+from {transform:rotate(-78deg) }to {transform:rotate(-90deg);}`;
 
 const IconGroup = styled.div`
   display: flex;
@@ -256,16 +255,16 @@ const AboutMeContainer = styled.div`
   }
 
   .emphasis {
-    color: ${(props) => (props.show ? colors.black : 'transparent')};
+    color: ${(props) => (props.show ? colors.offWhite : 'transparent')};
     font-weight: 700;
     background-position: right;
     background-size: ${(props) => (props.show ? '0% 100%' : '100% 100%')};
-    background-color: ${(props) => (props.show ? colors.yellow + 80 : 'none')};
-    background-image: linear-gradient(${colors.darkGreen}, ${colors.darkGreen});
+    background-color: ${(props) => (props.show ? colors.darkGreen : 'none')};
+    background-image: linear-gradient(${colors.red}, ${colors.red});
     background-repeat: no-repeat;
     transition-property: background-size, background-color, color;
-    transition-duration: 500ms, 300ms, 300ms;
-    transition-delay: 0s, 500ms, 200ms;
+    transition-duration: 500ms, 500ms, 500ms;
+    transition-delay: 0s, 0ms, 0ms;
     transition-timing-function: ease-in-out;
   }
 

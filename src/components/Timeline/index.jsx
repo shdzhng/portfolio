@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { memo } from 'react';
 import {
   TimeLine,
   TimelineContainer,
@@ -20,4 +20,4 @@ function Timeline() {
   );
 }
 
-export default Timeline;
+export default memo(Timeline);

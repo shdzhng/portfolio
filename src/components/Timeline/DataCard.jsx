@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   Container,
   Badge,
@@ -28,4 +28,4 @@ function DataCard({ data }) {
     </Container>
   );
 }
-export default DataCard;
+export default memo(DataCard);

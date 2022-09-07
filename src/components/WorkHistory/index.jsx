@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, memo, useRef } from 'react';
 import employmentData from '../../static/data/employmentData';
 import Container from './JobContainer';
 import { JobsContainer } from './workhistory.styles';
+import Divider from '../../static/components/Divder';
 
 function WorkHistory() {
   const { cultural, volunteer } = employmentData;
@@ -17,26 +18,31 @@ function WorkHistory() {
   };
 
   return (
-    <JobsContainer ref={viewElement}>
-      <div style={{ flexBasis: '50%' }}>
-        <h1 style={{ textAlign: 'center' }}>Worked</h1>
-        {cultural.map((job, i) => renderJob(job, i, 'cultural', openAll))}
-      </div>
+    <>
+      <h1 id="whereibeen" ref={viewElement}>
+        Where I've <span />
+      </h1>
+      <JobsContainer>
+        <div style={{ flexBasis: '50%' }}>
+          <h1 style={{ textAlign: 'center' }}>Worked</h1>
+          {cultural.map((job, i) => renderJob(job, i, 'cultural', openAll))}
+        </div>
 
-      <div style={{ flexBasis: '50%' }}>
-        <h1 style={{ textAlign: 'center' }}>Volunteered</h1>
+        <div style={{ flexBasis: '50%' }}>
+          <h1 style={{ textAlign: 'center' }}>Volunteered</h1>
 
-        {volunteer.map((job, i) => renderJob(job, i, 'volunteer', openAll))}
-        <button
-          onClick={() => {
-            handleClick();
-          }}
-        >
-          {openAll ? '🔺 Collapse All 🔺' : '🔻 Expand All 🔻'}
-        </button>
-      </div>
-    </JobsContainer>
+          {volunteer.map((job, i) => renderJob(job, i, 'volunteer', openAll))}
+          <button
+            onClick={() => {
+              handleClick();
+            }}
+          >
+            {openAll ? '🔺 Collapse All 🔺' : '🔻 Expand All 🔻'}
+          </button>
+        </div>
+      </JobsContainer>
+    </>
   );
 }
 
-export default WorkHistory;
+export default memo(WorkHistory);

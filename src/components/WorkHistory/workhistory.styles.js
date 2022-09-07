@@ -78,6 +78,7 @@ const JobContainer = styled.div`
   overflow: hidden;
   border-radius: 1em;
   transition: all 500ms ease;
+
   &:hover {
     &:before {
       color: ${colors.offWhite};
@@ -123,12 +124,12 @@ const JobsContainer = styled.div`
   }
 
   button {
-    position: absolute;
-    width: 50%;
+    width: 100%;
     height: 3em;
     background-color: ${colors.yellow};
     color: ${colors.darkBlue};
     border: none;
+    margin-bottom: 1em;
     border-radius: 1em;
     height: 3em;
     font-size: 1em;

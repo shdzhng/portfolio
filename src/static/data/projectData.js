@@ -22,6 +22,7 @@ const projectData = [
       github: 'https://github.com/shdzhng/Mooday-Journal-Mood-Tracker',
       demo: 'https://mooday-demo.web.app/',
       youtube: 'EIcrskdaSMM',
+      img: require('../../static/img/mooday.png'),
     },
   },
   {
@@ -44,6 +45,8 @@ const projectData = [
       github:
         'https://github.com/shdzhng/Bruce-Lee-One-Family-Inspiration-Tree',
       demo: 'https://bruceleeinspirationtree.web.app/',
+      youtube: 'xL-ZNEpqpfk',
+      img: require('../../static/img/brucelee.png'),
     },
   },
   {
@@ -58,7 +61,8 @@ const projectData = [
     links: {
       github: 'https://github.com/shdzhng/eco-pathfinder',
       demo: 'https://ecopath-f76ee.web.app/',
-      gif: 'https://camo.githubusercontent.com/2ed49eba4b988cc04831b5fce89c5978f589790a371285b7ea7e78462d0a707e/68747470733a2f2f6d65646961312e67697068792e636f6d2f6d656469612f496e34695a307a3463483069484851566d4c2f67697068792e6769663f6369643d373930623736313134613332663964623664303230386438383937366266376562386637353934643337376632303964267269643d67697068792e6769662663743d67',
+      youtube: '5yC4WV-SwL4',
+      img: require('../../static/img/ecopath.png'),
     },
   },
   {
@@ -72,6 +76,7 @@ const projectData = [
     links: {
       github: 'https://github.com/shdzhng/SuccessionGardeningHub',
       demo: 'https://gardening-hub.web.app/',
+      img: require('../../static/img/gardenhub.png'),
     },
   },
   {
@@ -93,6 +98,8 @@ const projectData = [
     links: {
       github: 'https://github.com/shdzhng/SuccessionGardeningHub',
       demo: null,
+      youtube: 'CQINy-ngLzc',
+      img: require('../img/pokemart.png'),
     },
   },
   {

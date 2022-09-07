@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, memo, useEffect, useRef } from 'react';
 import {
   GridItem,
   Heading,
@@ -16,12 +16,18 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LocalSeeIcon from '@mui/icons-material/LocalSee';
 import YoutubeEmbed from '../../static/components/YoutubePlayer';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-
+import FadeIn from '../../static/components/FadeIn';
 
 const ProjectContainer = ({ project }) => {
   const { name, description, links, technologies, highlights } = project;
   const [open, setOpen] = useState(false);
   const [media, setMedia] = useState(null);
+  const [height, setHeight] = useState(0);
+  const container = useRef(null);
+
+  useEffect(() => {
+    setHeight(container.current.clientHeight);
+  }, [project]);
 
   return (
     <>
@@ -43,8 +49,8 @@ const ProjectContainer = ({ project }) => {
         ) : null}
       </ModalBackground>
 
-      <PolkaFlex id="project-container">
-        <GridItem>
+      <PolkaFlex height={height}>
+        <GridItem ref={container}>
           <Heading>{name}</Heading>
           <SectionContainer>
             <div style={{ flexBasis: '45%' }}>
@@ -62,7 +68,6 @@ const ProjectContainer = ({ project }) => {
               </ListGroup>
             </div>
           </SectionContainer>
-
           <Text variant="title">Highlights</Text>
           <ListGroup variant="highlight">
             {highlights.map((highlight, i) => (
@@ -74,37 +79,46 @@ const ProjectContainer = ({ project }) => {
             ))}
           </ListGroup>
 
-          <ButtonGroup>
-            {!links.demo ? null : (
-              <AnchorButton target="_blank" href={links.demo}>
-                <p style={{ fontSize: '1em' }}>LIVE DEMO</p>
+          <SectionContainer
+            style={{
+              gap: '1em',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {links.img ? <img src={links.img} /> : null}
+            <ButtonGroup>
+              {!links.demo ? null : (
+                <AnchorButton target="_blank" href={links.demo}>
+                  <p style={{ fontSize: '1em' }}>LIVE DEMO</p>
+                </AnchorButton>
+              )}
+              <AnchorButton target="_blank" href={links.github}>
+                <GitHubIcon style={{ fontSize: '1.5em' }} />
               </AnchorButton>
-            )}
-            <AnchorButton target="_blank" href={links.github}>
-              <GitHubIcon style={{ fontSize: '1.5em' }} />
-            </AnchorButton>
 
-            {!links.gif ? null : (
-              <AnchorButton
-                onClick={() => {
-                  setOpen(true);
-                  setMedia({ type: 'gif', src: links.gif });
-                }}
-              >
-                <LocalSeeIcon style={{ fontSize: '1.5em' }} />
-              </AnchorButton>
-            )}
-            {!links.youtube ? null : (
-              <AnchorButton
-                onClick={() => {
-                  setOpen(true);
-                  setMedia({ type: 'youtube', src: links.youtube });
-                }}
-              >
-                <YouTubeIcon style={{ fontSize: '1.5em' }} />
-              </AnchorButton>
-            )}
-          </ButtonGroup>
+              {!links.gif ? null : (
+                <AnchorButton
+                  onClick={() => {
+                    setOpen(true);
+                    setMedia({ type: 'gif', src: links.gif });
+                  }}
+                >
+                  <LocalSeeIcon style={{ fontSize: '1.5em' }} />
+                </AnchorButton>
+              )}
+              {!links.youtube ? null : (
+                <AnchorButton
+                  onClick={() => {
+                    setOpen(true);
+                    setMedia({ type: 'youtube', src: links.youtube });
+                  }}
+                >
+                  <YouTubeIcon style={{ fontSize: '1.5em' }} />
+                </AnchorButton>
+              )}
+            </ButtonGroup>
+          </SectionContainer>
         </GridItem>
         <div id="filler"></div>
       </PolkaFlex>
@@ -112,4 +126,4 @@ const ProjectContainer = ({ project }) => {
   );
 };
 
-export default ProjectContainer;
+export default memo(ProjectContainer);

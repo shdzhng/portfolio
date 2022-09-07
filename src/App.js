@@ -24,20 +24,21 @@ function App() {
         margin: '0 auto',
       }}
     >
+
       <AboutMe /> 
-      <FadeIn>
-        <h1 id="projects" style={{ margin: '1em 0', textAlign: 'center' }}>
-          My Projects
-        </h1>
-        <ProjectDisplay />
-      </FadeIn>
       <FadeIn>
         <Divider />
       </FadeIn>
       <FadeIn>
-        <h1 id="whereibeen" style={{}}>
-          Where I've <span />
+        <h1 id="projects" style={{ margin: '1em 0', textAlign: 'center' }}>
+          My Projects
         </h1>
+      </FadeIn>
+      <ProjectDisplay />
+      <FadeIn>
+        <Divider />
+      </FadeIn>
+      <FadeIn>
         <WorkHistory />
       </FadeIn>
       <FadeIn>
@@ -45,7 +46,7 @@ function App() {
       </FadeIn>
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
-          References
+          See My References
         </h1>
         <ReferenceSlider />
       </FadeIn>
@@ -55,9 +56,6 @@ function App() {
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
         <Timeline id="education-timeline" />
-      </FadeIn>
-      <FadeIn>
-        <Divider />
       </FadeIn>
     </div>
   );

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { colors } from '../colors';
+import { memo } from 'react';
 
 const Divider = styled.div`
   width: 90vw;
-  margin: 2em 1em;
+  margin: 5em 1em;
   padding: 1px;
   background-color: ${colors.oliveGreen}90;
   position: relative;
@@ -25,4 +26,4 @@ const Divider = styled.div`
   }
 `;
 
-export default Divider;
+export default memo(Divider);

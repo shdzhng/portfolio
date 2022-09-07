@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { JobContainer, ContentContainer } from './workhistory.styles';
 
 const Container = ({ job, type, openAll }, i) => {
@@ -60,4 +60,4 @@ const Container = ({ job, type, openAll }, i) => {
   );
 };
 
-export default Container;
+export default memo(Container);

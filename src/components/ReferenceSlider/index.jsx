@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import referenceData from '../../static/data/referenceData';
 import {
   Slide,
@@ -163,4 +163,4 @@ function ReferenceSlider() {
   );
 }
 
-export default ReferenceSlider;
+export default memo(ReferenceSlider);

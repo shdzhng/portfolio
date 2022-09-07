@@ -7,10 +7,11 @@ const Container = styled.div`
   right: 130px;
   margin-top: 2em;
   width: 80vw;
-  max-height: fit-content;
   display: flex;
+  height: auto;
   left: -6em;
   position: relative;
+
   transition: all 100ms ease;
   @media screen and (max-width: 728px) {
     flex-direction: column;
@@ -27,10 +28,10 @@ const ModalBackground = styled.div`
   top: 0;
   left: 0;
   z-index: 3;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: ${colors.darkGreen}90;
-  overflow-y: hidden;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
 `;
@@ -55,7 +56,9 @@ const GridItem = styled(animated.div)`
   flex-direction: column;
   align-items: center;
   padding: 0 2em 2em 2em;
-  max-height: fit-content;
+  /* max-height: fit-content; */
+  max-height: ${(props) => (props.height !== 0 ? props.height : 'auto')};
+  height: auto;
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
@@ -106,11 +109,13 @@ const GridItem = styled(animated.div)`
 const PolkaFlex = styled.div`
   background-color: ${colors.offBlue};
   border-radius: 3em 1em 1em 3em;
-  height: 100%;
   width: 65vw;
+  max-height: ${(props) => (props.height !== 0 ? props.height : 'auto')};
   margin: 0 auto;
   display: flex;
   color: ${colors.offWhite};
+  transition: height 1000ms ease-in-out;
+
   #filler {
     margin-top: 1em;
     background-color: ${colors.offWhite};
@@ -120,11 +125,18 @@ const PolkaFlex = styled.div`
     flex-grow: 1;
     flex-basis: 30%;
   }
+
   @media screen and (max-width: 1200px) {
     width: 100vw;
+    #filler {
+      flex-basis: 20%;
+    }
   }
   @media screen and (max-width: 728px) {
     width: 80vw;
+    #filler {
+      flex-basis: 10%;
+    }
   }
 `;
 
@@ -134,15 +146,20 @@ const SectionContainer = styled.div`
   @media screen and (max-width: 728px) {
     flex-direction: column;
   }
+
+  img {
+    width: 45%;
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
   gap: 1em;
+  flex-direction: column;
 
   @media screen and (max-width: 728px) {
-    padding-bottom: 1em;
-    margin-right: 2em;
+    flex-direction: row;
+    margin-bottom: 1em;
   }
 `;
 

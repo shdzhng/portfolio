@@ -13,7 +13,7 @@ const employmentData = {
           type: 'FT Contactor',
           responsibility: [
             'Spearheaded online programs collaboratively with stakeholders with short turn arounds, and improved program engagement by 23%.',
-            'Facilitated the integration of an outgoing exhibition <a target="__blank" href="https://chsa.org/virtual-tour-of-chinese-american-exclusion-inclusion/">Chinese American: Exclusion/Inclusion </a>into Matterport and developed its virtual tour.',
+            'Facilitated the integration of an outgoing exhibition Chinese American: Exclusion/Inclusion into Matterport and developed its virtual tour.',
             'Coordinated volunteers and intern at online and in-person events.',
           ],
         },
@@ -22,7 +22,7 @@ const employmentData = {
           longTitle: 'Exhibition Research Intern',
           type: 'Internship',
           responsibility: [
-            'Conducted the data collection, analysis, and visualization of material for the <a target="__blank" href="https://www.wearebrucelee.org/">We Are Bruce Lee </a> exhibition and directly informed the exhibit curators’ design of the exhibition.',
+            'Conducted the data collection, analysis, and visualization of material for the We Are Bruce Lee  exhibition and directly informed the exhibit curators’ design of the exhibition.',
           ],
         },
       ],

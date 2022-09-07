@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, memo } from 'react';
 import {
   Portrait,
   TextContainer,
@@ -97,27 +97,25 @@ function AboutMe() {
           </h1>
           <p>
             I am a Junior Frontend Developer based in Los Angeles with a passion
-            for building engaging web interfaces. I am the type of software
-            engineer who likes to think beyond the code, and focus on how my
-            code co-create experiences with the users.
+            for building engaging web interfaces. I am the type of Frontend Dev
+            who likes to think beyond the code, and focus on how my code
+            co-create experiences with the users.
           </p>
-          <h4>My background</h4>
+
           <p>
             I come from a{' '}
             <span className="emphasis">
-              Museum and Social Science background{' '}
-            </span>
-            and{'  '}
-            <span className="emphasis">
-              hold a Master's degree in Tourism, Society and Environment{' '}
+              Museum and Social Science background
             </span>{' '}
-            from Wageningen University in the Netherlands. As a museum
-            professional, I was able to leverage my academic background to work
-            as an{' '}
-            <span className="emphasis"> Education and Program Coordinator</span>{' '}
-            and interned to conduct{' '}
-            <span className="emphasis"> Impact Evaluation</span>, and{' '}
-            <span className="emphasis">Exhibiton Research</span>.{' '}
+            and hold a{' '}
+            <span className="emphasis">
+              Master's degree in Tourism, Society and Environment
+            </span>{' '}
+            from Wageningen University in the Netherlands. As an Education and
+            Program Coordinator, I was able to leverage my academic background
+            to curate exciting public programs at the intersection of academia
+            and public history. As a Smithsonian intern, I utilized my
+            statistics training to conduct Program Impact Evaluation.{' '}
           </p>
           <p>
             {' '}
@@ -128,25 +126,23 @@ function AboutMe() {
               right="-2em"
               message="👇🏻 I can take you there! "
             >
-              <StyledLink to="reference">See my references :)</StyledLink>
+              <StyledLink
+                to="reference"
+                spy={true}
+                smooth={true}
+                duration={800}
+                offset={-300}
+              >
+                See my references :)
+              </StyledLink>
             </CustomToolTip>
           </p>
           <h4>Why Frontend Engineering?</h4>
           <p>
-            Everyone breaks into tech for their own reason, my own lightbulb
-            moment was seeing the result of a museum exhibit digitization that I
-            coordinated onto{' '}
-            <a
-              target="__blank"
-              href="https://chsa.org/virtual-tour-of-chinese-american-exclusion-inclusion/"
-              id="matterport-link"
-            >
-              {' '}
-              Matterport
-            </a>
-            .
+            Everyone breaks into tech for their reason, my lightbulb moment was
+            seeing the final product of a museum exhibit that I helped
+            coordinate into the Matterport.{' '}
             <span className="emphasis">
-              {' '}
               I was so impressed by how technology empowered the museum to break
               free of its location constraints to reach folks far and wide
             </span>
@@ -162,7 +158,15 @@ function AboutMe() {
               right="-2em"
               message="👇🏻 I can take you there! "
             >
-              <StyledLink to="projects">See my projects :)</StyledLink>
+              <StyledLink
+                spy={true}
+                smooth={true}
+                duration={800}
+                offset={-300}
+                to="projects"
+              >
+                See my projects :)
+              </StyledLink>
             </CustomToolTip>
           </p>
           <p>
@@ -210,4 +214,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default memo(AboutMe);

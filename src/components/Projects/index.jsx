@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import projectData from '../../static/data/projectData';
-import { Container, SideBarItem, SideBar } from './projects.styles';
+import { Container, SideBarItem, SideBar, PolkaFlex } from './projects.styles';
 import ProjectContainer from './ProjectContainer';
+
 function ProjectDisplay() {
   const [selectedProjectId, setSelectedProjectId] = useState(0);
-
   const handleSelect = (i) => {
     setSelectedProjectId(i);
   };
@@ -29,4 +29,4 @@ function ProjectDisplay() {
   );
 }
 
-export default ProjectDisplay;
+export default memo(ProjectDisplay);
