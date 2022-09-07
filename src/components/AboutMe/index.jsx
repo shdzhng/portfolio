@@ -59,6 +59,7 @@ function AboutMe() {
 
   return (
     <AboutMeContainer
+      id="about"
       onMouseEnter={() => {
         setShow(true);
       }}
@@ -103,19 +104,13 @@ function AboutMe() {
           </p>
 
           <p>
-            I come from a{' '}
-            <span className="emphasis">
-              Museum and Social Science background
-            </span>{' '}
-            and hold a{' '}
-            <span className="emphasis">
-              Master's degree in Tourism, Society and Environment
-            </span>{' '}
-            from Wageningen University in the Netherlands. As an Education and
-            Program Coordinator, I was able to leverage my academic background
-            to curate exciting public programs at the intersection of academia
-            and public history. As a Smithsonian intern, I utilized my
-            statistics training to conduct Program Impact Evaluation.{' '}
+            I come from a Museum and Social Science background and hold a
+            Master's degree in Tourism, Society and Environment from Wageningen
+            University in the Netherlands. As an Education and Program
+            Coordinator, I was able to leverage my academic background to curate
+            exciting public programs at the intersection of academia and public
+            history. As a Smithsonian intern, I utilized my statistics training
+            to conduct Program Impact Evaluation.{' '}
           </p>
           <p>
             {' '}
@@ -141,33 +136,15 @@ function AboutMe() {
           <p>
             Everyone breaks into tech for their reason, my lightbulb moment was
             seeing the final product of a museum exhibit that I helped
-            coordinate into the Matterport.{' '}
-            <span className="emphasis">
-              I was so impressed by how technology empowered the museum to break
-              free of its location constraints to reach folks far and wide
-            </span>
-            , that I decided to make the leap of faith.
+            coordinate into the Matterport. I was so impressed by how technology
+            empowered the museum to break free of its location constraints to
+            reach folks far and wide , that I decided to make the leap of faith.
           </p>
           <p>
             Looking forward, I am excited to branch out and explore all areas of
             software development. I am particularly intrigued by data
             visualization and animation since I come from a scientific
             background and am driven to help curate meaningful user experiences.{' '}
-            <CustomToolTip
-              top="2em"
-              right="-2em"
-              message="👇🏻 I can take you there! "
-            >
-              <StyledLink
-                spy={true}
-                smooth={true}
-                duration={800}
-                offset={-300}
-                to="projects"
-              >
-                See my projects :)
-              </StyledLink>
-            </CustomToolTip>
           </p>
           <p>
             I am currently learning{' '}

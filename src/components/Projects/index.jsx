@@ -10,7 +10,7 @@ function ProjectDisplay() {
   };
 
   return (
-    <Container id="projects" style={{ marginBottom: '2em' }}>
+    <Container style={{ marginBottom: '2em' }}>
       <SideBar>
         {projectData.map((project, i) => (
           <SideBarItem
@@ -24,9 +24,12 @@ function ProjectDisplay() {
           </SideBarItem>
         ))}
       </SideBar>
-      <ProjectContainer project={projectData[selectedProjectId]} />
+      <ProjectContainer
+        id="projects"
+        project={projectData[selectedProjectId]}
+      />
     </Container>
   );
 }
 
-export default memo(ProjectDisplay);
+export default ProjectDisplay;

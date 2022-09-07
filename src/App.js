@@ -6,6 +6,7 @@ import Divider from './static/components/Divder';
 import FadeIn from './static/components/FadeIn';
 import AboutMe from './components/AboutMe';
 import WorkHistory from './components/WorkHistory';
+import Remote from './static/components/Remote';
 
 function App() {
   useEffect(() => {
@@ -24,8 +25,8 @@ function App() {
         margin: '0 auto',
       }}
     >
-
-      <AboutMe /> 
+      <Remote />
+      <AboutMe />
       <FadeIn>
         <Divider />
       </FadeIn>
@@ -46,7 +47,7 @@ function App() {
       </FadeIn>
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
-          See My References
+          References (LinkedIn)
         </h1>
         <ReferenceSlider />
       </FadeIn>

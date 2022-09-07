@@ -255,12 +255,12 @@ const AboutMeContainer = styled.div`
   }
 
   .emphasis {
-    color: ${(props) => (props.show ? colors.offWhite : 'transparent')};
+    color: ${(props) => (props.show ? colors.black : 'transparent')};
     font-weight: 700;
     background-position: right;
     background-size: ${(props) => (props.show ? '0% 100%' : '100% 100%')};
-    background-color: ${(props) => (props.show ? colors.darkGreen : 'none')};
-    background-image: linear-gradient(${colors.red}, ${colors.red});
+    background-color: ${(props) => (props.show ? colors.yellow : 'none')};
+    background-image: linear-gradient(${colors.black}, ${colors.black});
     background-repeat: no-repeat;
     transition-property: background-size, background-color, color;
     transition-duration: 500ms, 500ms, 500ms;

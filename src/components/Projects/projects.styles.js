@@ -55,10 +55,8 @@ const GridItem = styled(animated.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: fit-content;
   padding: 0 2em 2em 2em;
-  /* max-height: fit-content; */
-  max-height: ${(props) => (props.height !== 0 ? props.height : 'auto')};
-  height: auto;
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
@@ -110,7 +108,6 @@ const PolkaFlex = styled.div`
   background-color: ${colors.offBlue};
   border-radius: 3em 1em 1em 3em;
   width: 65vw;
-  max-height: ${(props) => (props.height !== 0 ? props.height : 'auto')};
   margin: 0 auto;
   display: flex;
   color: ${colors.offWhite};
@@ -128,6 +125,7 @@ const PolkaFlex = styled.div`
 
   @media screen and (max-width: 1200px) {
     width: 100vw;
+
     #filler {
       flex-basis: 20%;
     }

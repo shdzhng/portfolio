@@ -26,7 +26,7 @@ const ProjectContainer = ({ project }) => {
   const container = useRef(null);
 
   useEffect(() => {
-    setHeight(container.current.clientHeight);
+    setHeight(container.current.clientHeight + 50);
   }, [project]);
 
   return (
@@ -49,76 +49,78 @@ const ProjectContainer = ({ project }) => {
         ) : null}
       </ModalBackground>
 
-      <PolkaFlex height={height}>
-        <GridItem ref={container}>
-          <Heading>{name}</Heading>
-          <SectionContainer>
-            <div style={{ flexBasis: '45%' }}>
-              <Text variant="title">Description</Text>
-              <Text dangerouslySetInnerHTML={{ __html: description }}></Text>
-            </div>
-            <div style={{ flexBasis: '35%' }}>
-              <Text variant="title">Technology</Text>
-              <ListGroup variant="technology">
-                {technologies.map((tech, i) => (
-                  <ListItem key={i} variant="technology">
-                    {tech}
-                  </ListItem>
-                ))}
-              </ListGroup>
-            </div>
-          </SectionContainer>
-          <Text variant="title">Highlights</Text>
-          <ListGroup variant="highlight">
-            {highlights.map((highlight, i) => (
-              <ListItem
-                variant="highlight"
-                key={i}
-                dangerouslySetInnerHTML={{ __html: highlight }}
-              />
-            ))}
-          </ListGroup>
+      <PolkaFlex>
+        <GridItem style={{ height: height + 'px' }}>
+          <div ref={container}>
+            <Heading>{name}</Heading>
+            <SectionContainer>
+              <div style={{ flexBasis: '45%' }}>
+                <Text variant="title">Description</Text>
+                <Text dangerouslySetInnerHTML={{ __html: description }}></Text>
+              </div>
+              <div style={{ flexBasis: '35%' }}>
+                <Text variant="title">Technology</Text>
+                <ListGroup variant="technology">
+                  {technologies.map((tech, i) => (
+                    <ListItem key={i} variant="technology">
+                      {tech}
+                    </ListItem>
+                  ))}
+                </ListGroup>
+              </div>
+            </SectionContainer>
+            <Text variant="title">Highlights</Text>
+            <ListGroup variant="highlight">
+              {highlights.map((highlight, i) => (
+                <ListItem
+                  variant="highlight"
+                  key={i}
+                  dangerouslySetInnerHTML={{ __html: highlight }}
+                />
+              ))}
+            </ListGroup>
 
-          <SectionContainer
-            style={{
-              gap: '1em',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            {links.img ? <img src={links.img} /> : null}
-            <ButtonGroup>
-              {!links.demo ? null : (
-                <AnchorButton target="_blank" href={links.demo}>
-                  <p style={{ fontSize: '1em' }}>LIVE DEMO</p>
+            <SectionContainer
+              style={{
+                gap: '1em',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              {links.img ? <img src={links.img} /> : null}
+              <ButtonGroup>
+                {!links.demo ? null : (
+                  <AnchorButton target="_blank" href={links.demo}>
+                    <p style={{ fontSize: '1em' }}>LIVE DEMO</p>
+                  </AnchorButton>
+                )}
+                <AnchorButton target="_blank" href={links.github}>
+                  <GitHubIcon style={{ fontSize: '1.5em' }} />
                 </AnchorButton>
-              )}
-              <AnchorButton target="_blank" href={links.github}>
-                <GitHubIcon style={{ fontSize: '1.5em' }} />
-              </AnchorButton>
 
-              {!links.gif ? null : (
-                <AnchorButton
-                  onClick={() => {
-                    setOpen(true);
-                    setMedia({ type: 'gif', src: links.gif });
-                  }}
-                >
-                  <LocalSeeIcon style={{ fontSize: '1.5em' }} />
-                </AnchorButton>
-              )}
-              {!links.youtube ? null : (
-                <AnchorButton
-                  onClick={() => {
-                    setOpen(true);
-                    setMedia({ type: 'youtube', src: links.youtube });
-                  }}
-                >
-                  <YouTubeIcon style={{ fontSize: '1.5em' }} />
-                </AnchorButton>
-              )}
-            </ButtonGroup>
-          </SectionContainer>
+                {!links.gif ? null : (
+                  <AnchorButton
+                    onClick={() => {
+                      setOpen(true);
+                      setMedia({ type: 'gif', src: links.gif });
+                    }}
+                  >
+                    <LocalSeeIcon style={{ fontSize: '1.5em' }} />
+                  </AnchorButton>
+                )}
+                {!links.youtube ? null : (
+                  <AnchorButton
+                    onClick={() => {
+                      setOpen(true);
+                      setMedia({ type: 'youtube', src: links.youtube });
+                    }}
+                  >
+                    <YouTubeIcon style={{ fontSize: '1.5em' }} />
+                  </AnchorButton>
+                )}
+              </ButtonGroup>
+            </SectionContainer>
+          </div>
         </GridItem>
         <div id="filler"></div>
       </PolkaFlex>
@@ -126,4 +128,4 @@ const ProjectContainer = ({ project }) => {
   );
 };
 
-export default memo(ProjectContainer);
+export default ProjectContainer;
