@@ -115,7 +115,7 @@ const PolkaFlex = styled.div`
     margin-top: 1em;
     background-color: ${colors.offWhite};
     mask-image: url(${polkadot});
-    mask-size: 200%;
+    mask-size: 250%;
     position: relative;
     flex-grow: 1;
     flex-basis: 30%;

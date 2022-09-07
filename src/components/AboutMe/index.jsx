@@ -201,7 +201,9 @@ function AboutMe() {
             </IconContainer>
           </IconGroup>
           <br />
-          <h4>⚡ Powered by React and Styled-Components ⚡</h4>
+          <h5 style={{ textAlign: 'center' }}>
+            ⚡ Created with React and Styled-Components ⚡
+          </h5>
         </TextContainer>
       </AboutInfo>
     </AboutMeContainer>

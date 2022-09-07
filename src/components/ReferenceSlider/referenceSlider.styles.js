@@ -1,11 +1,22 @@
 import styled from 'styled-components';
 import { colors } from '../../static/colors';
-import { animated } from 'react-spring';
 
 const SlideShow = styled.div`
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
+`;
+
+const AllContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 728px) {
+    .big-btn {
+      display: none;
+    }
+  }
 `;
 
 const Container = styled.div`
@@ -48,7 +59,7 @@ const Comment = styled.p`
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-  line-height: 23px;
+  line-height: 1.5em;
   &:before {
     content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23fefae0' viewBox='0 0 24 24'><path d='M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z'/></svg>");
     margin-right: 10px;
@@ -126,8 +137,20 @@ const Slide = styled.div`
 `;
 
 const SlideShowDots = styled.div`
-  text-align: center;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .small-btn {
+    display: none;
+  }
+
+  @media screen and (max-width: 728px) {
+    .small-btn {
+      display: inline-block;
+    }
+  }
 `;
 
 const SlideShowDot = styled.div`
@@ -175,6 +198,7 @@ export {
   Comment,
   Divider,
   SmallText,
+  AllContainer,
   Heading,
   Container,
 };
