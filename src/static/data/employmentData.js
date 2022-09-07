@@ -22,7 +22,7 @@ const employmentData = {
           longTitle: 'Exhibition Research Intern',
           type: 'Internship',
           responsibility: [
-            'Conducted the data collection, analysis, and visualization of material for the We Are Bruce Lee exhibition and directly informed the exhibit curators’ design of the exhibition.',
+            'Conducted the data collection, analysis, and visualization of material for the <a target="__blank" href="https://www.wearebrucelee.org/">We Are Bruce Lee </a> exhibition and directly informed the exhibit curators’ design of the exhibition.',
           ],
         },
       ],

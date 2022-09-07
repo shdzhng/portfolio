@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { JobContainer, ContentContainer } from './workhistory.styles';
 
-const Container = ({ job, type }, i) => {
+const Container = ({ job, type, openAll }, i) => {
   const [show, setShow] = useState(false);
   const { name, longName, end, start, location, skills, positions, longTitle } =
     job;
+
+  useEffect(() => {
+    setShow(openAll);
+  }, [openAll]);
 
   const handleToggle = () => {
     setShow((prev) => !prev);

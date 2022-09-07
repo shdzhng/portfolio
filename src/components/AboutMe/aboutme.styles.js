@@ -27,6 +27,9 @@ background-size: 210%;
 }
 `;
 
+const windblowing = keyframes`    from {transform:rotate(-78deg); }
+       to {transform:rotate(-90deg);}`;
+
 const IconGroup = styled.div`
   display: flex;
   margin-top: 1em;
@@ -63,33 +66,33 @@ const Portrait = styled.div`
   z-index: 5;
 
   @media screen and (max-width: 1200px) {
-    height: 600px;
-    background-size: 210%;
-    background-position-y: -700px;
+    background-position-y: -500px;
+    border-radius: 1em 0em 0em 1em;
+    height: 100%;
+    animation: none;
   }
-
-  @media screen and (max-width: 900px) {
-    height: 400px;
-    background-position-y: -450px;
+  @media screen and (max-width: 1100px) {
+    background-position-y: -350px;
   }
-
-  @media screen and (max-width: 500px) {
-    height: 300px;
-    background-position-y: -380px;
+  @media screen and (max-width: 850px) {
+    background-position-y: -250px;
   }
-
-  @media screen and (max-width: 400px) {
-    background-position-y: -230px;
+  @media screen and (max-width: 600px) {
+    background-position-y: -100px;
   }
 `;
-
-const windblowing = keyframes`    from {transform:rotate(-78deg); }
-       to {transform:rotate(-90deg);}`;
 
 const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 23%;
+  border-radius: 1em;
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: row;
+    height: fit-content;
+  }
 
   #banner {
     position: absolute;
@@ -102,6 +105,11 @@ const LeftContainer = styled.div`
     width: 1em;
     border-radius: 1em;
     left: -0.15em;
+
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
+
     &:hover {
       animation-play-state: paused;
       &:before {
@@ -142,10 +150,12 @@ const TechstackContainer = styled.div`
   background-color: ${colors.mediumBlue1};
   border-radius: 0em 0em 1em 1em;
   height: 100%;
+
   flex-shrink: 10;
   display: flex;
   flex-direction: column;
   color: ${colors.offWhite};
+
   #filler {
     margin-top: 1em;
     border-radius: 0em 0em 1em 1em;
@@ -157,6 +167,10 @@ const TechstackContainer = styled.div`
     position: relative;
     flex-grow: 1;
   }
+  @media screen and (max-width: 1200px) {
+    border-radius: 0em 1em 1em 0em;
+  }
+
   h3 {
     margin: 5px;
     flex-basis: 20%;
@@ -211,7 +225,8 @@ const AboutMeContainer = styled.div`
   border-radius: 2em;
   border: 4px dotted ${colors.darkBlue};
   width: 60vw;
-  height: 100vh;
+  height: fit-content;
+  min-width: 400px;
   background-color: ${colors.lightBlue}90;
   display: flex;
   line-height: 1.3em;
@@ -266,7 +281,6 @@ const AboutMeContainer = styled.div`
   @media screen and (max-width: 1200px) {
     width: 65vw;
     flex-direction: column;
-    height: fit-content;
   }
 
   @media screen and (max-width: 728px) {

@@ -10,7 +10,7 @@ function ProjectDisplay() {
   };
 
   return (
-    <Container id="projects">
+    <Container id="projects" style={{ marginBottom: '2em' }}>
       <SideBar>
         {projectData.map((project, i) => (
           <SideBarItem

@@ -64,20 +64,14 @@ function AboutMe() {
       }}
       show={show}
     >
-      <LeftContainer
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          flexBasis: '23%',
-          boxShadow: '3px 5px 5px 0px rgba(0,0,0,0.25)',
-          borderRadius: '1em 1em 1em 1em',
-        }}
-      >
+      <LeftContainer>
         <div
           id="banner"
           onClick={() => (window.location = 'mailto:shoud.zhang@gmail.com')}
         />
+
         <Portrait />
+
         <TechstackContainer>
           <h3>Technology</h3>
           <ul>
@@ -180,6 +174,7 @@ function AboutMe() {
               return `${tech} and `;
             })}
           </p>
+
           <IconGroup>
             <IconContainer
               target="_blank"
@@ -205,6 +200,8 @@ function AboutMe() {
               </p>
             </IconContainer>
           </IconGroup>
+          <br />
+          <h4>⚡ Powered by React and Styled-Components ⚡</h4>
         </TextContainer>
       </AboutInfo>
     </AboutMeContainer>

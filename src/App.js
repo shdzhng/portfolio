@@ -31,24 +31,33 @@ function App() {
         </h1>
         <ProjectDisplay />
       </FadeIn>
-      <Divider />
+      <FadeIn>
+        <Divider />
+      </FadeIn>
       <FadeIn>
         <h1 id="whereibeen" style={{}}>
           Where I've <span />
         </h1>
         <WorkHistory />
       </FadeIn>
-      <Divider />
+      <FadeIn>
+        <Divider />
+      </FadeIn>
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
           References
         </h1>
         <ReferenceSlider />
       </FadeIn>
-      <Divider />
+      <FadeIn>
+        <Divider />
+      </FadeIn>
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
         <Timeline id="education-timeline" />
+      </FadeIn>
+      <FadeIn>
+        <Divider />
       </FadeIn>
     </div>
   );

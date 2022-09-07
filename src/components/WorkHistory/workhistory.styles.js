@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../static/colors';
+import uparrow from './uparrow.svg';
 
 const ContentContainer = styled.div`
   color: ${colors.black};
@@ -115,9 +116,28 @@ const JobsContainer = styled.div`
   width: 80vw;
   display: flex;
   flex-direction: row;
+  position: relative;
   gap: 1em;
   @media screen and (max-width: 728px) {
     flex-direction: column;
+  }
+
+  button {
+    position: absolute;
+    width: 50%;
+    height: 3em;
+    background-color: ${colors.yellow};
+    color: ${colors.darkBlue};
+    border: none;
+    border-radius: 1em;
+    height: 3em;
+    font-size: 1em;
+    font-weight: 700;
+    transition: all 400ms ease-in-out;
+    &:hover {
+      background-color: ${colors.red};
+      color: ${colors.offWhite};
+    }
   }
 `;
 

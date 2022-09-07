@@ -17,6 +17,7 @@ import LocalSeeIcon from '@mui/icons-material/LocalSee';
 import YoutubeEmbed from '../../static/components/YoutubePlayer';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
+
 const ProjectContainer = ({ project }) => {
   const { name, description, links, technologies, highlights } = project;
   const [open, setOpen] = useState(false);
