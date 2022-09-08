@@ -40,7 +40,6 @@ const RemoteContainer = styled.nav`
   -webkit-box-shadow: 3px 3px 5px 0px ${colors.darkBlue};
   -moz-box-shadow: 3px 3px 5px 0px ${colors.darkBlue};
   box-shadow: 3px 3px 5px 0px ${colors.darkBlue};
-  display: none;
 
   section {
     display: flex;

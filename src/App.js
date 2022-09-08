@@ -7,6 +7,7 @@ import FadeIn from './static/components/FadeIn';
 import AboutMe from './components/AboutMe';
 import WorkHistory from './components/WorkHistory';
 import Remote from './static/components/Remote';
+import HoverCard from './components/HoverCard';
 
 function App() {
   useEffect(() => {
@@ -26,7 +27,9 @@ function App() {
       }}
     >
       {/* <Remote /> */}
+
       <AboutMe />
+
       <FadeIn>
         <Divider />
       </FadeIn>
@@ -58,6 +61,7 @@ function App() {
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
         <Timeline id="education-timeline" />
       </FadeIn>
+      <HoverCard />
     </div>
   );
 }
