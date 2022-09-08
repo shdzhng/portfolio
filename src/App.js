@@ -7,11 +7,14 @@ import FadeIn from './static/components/FadeIn';
 import AboutMe from './components/AboutMe';
 import WorkHistory from './components/WorkHistory';
 import Remote from './static/components/Remote';
-import HoverCard from './components/HoverCard';
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    // console.log('%c Hello there! ', 'background: #222; color: #bada55');
+    console.log(
+      '%c  ⚡ Handmade with React and Styled-Components ⚡! ',
+      'background: #222; color: #bada55'
+    );
   }, []);
 
   return (
@@ -33,27 +36,29 @@ function App() {
       <FadeIn>
         <Divider />
       </FadeIn>
+
       <FadeIn>
-        <h1 id="projects" style={{ margin: '1em 0', textAlign: 'center' }}>
-          My Projects
-        </h1>
+        <ProjectDisplay style={{ height: '100vh' }} />
       </FadeIn>
-      <ProjectDisplay />
-      <FadeIn>
-        <Divider />
-      </FadeIn>
-      <FadeIn>
-        <WorkHistory />
-      </FadeIn>
+
       <FadeIn>
         <Divider />
       </FadeIn>
+      <FadeIn>
+        <WorkHistory style={{ height: '100vh' }} />
+      </FadeIn>
+
+      <FadeIn>
+        <Divider />
+      </FadeIn>
+
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
           References (LinkedIn)
         </h1>
         <ReferenceSlider />
       </FadeIn>
+
       <FadeIn>
         <Divider />
       </FadeIn>
@@ -61,7 +66,7 @@ function App() {
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
         <Timeline id="education-timeline" />
       </FadeIn>
-      <HoverCard />
+      <Footer />
     </div>
   );
 }

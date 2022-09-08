@@ -10,25 +10,30 @@ function ProjectDisplay() {
   };
 
   return (
-    <Container style={{ marginBottom: '2em' }}>
-      <SideBar>
-        {projectData.map((project, i) => (
-          <SideBarItem
-            active={selectedProjectId === i}
-            onClick={() => {
-              handleSelect(i);
-            }}
-            key={i}
-          >
-            {project.name}
-          </SideBarItem>
-        ))}
-      </SideBar>
-      <ProjectContainer
-        id="projects"
-        project={projectData[selectedProjectId]}
-      />
-    </Container>
+    <>
+      <h1 id="projects" style={{ margin: '1em 0', textAlign: 'center' }}>
+        🛠️ What I've Built 🛠️
+      </h1>
+      <Container style={{ marginBottom: '2em' }}>
+        <SideBar>
+          {projectData.map((project, i) => (
+            <SideBarItem
+              active={selectedProjectId === i}
+              onClick={() => {
+                handleSelect(i);
+              }}
+              key={i}
+            >
+              {project.name}
+            </SideBarItem>
+          ))}
+        </SideBar>
+        <ProjectContainer
+          id="projects"
+          project={projectData[selectedProjectId]}
+        />
+      </Container>
+    </>
   );
 }
 

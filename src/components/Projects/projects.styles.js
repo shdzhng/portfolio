@@ -5,18 +5,19 @@ import polkadot from '../AboutMe/img/polkadot.svg';
 
 const Container = styled.div`
   right: 130px;
-  margin-top: 2em;
+  margin-top: 24px;
   width: 80vw;
+
   display: flex;
   height: auto;
-  left: -6em;
+  left: -72px;
   position: relative;
 
   transition: all 100ms ease;
   @media screen and (max-width: 728px) {
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 12px;
     min-height: 60vh;
     margin: 0;
     left: 0;
@@ -55,15 +56,16 @@ const GridItem = styled(animated.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   max-height: fit-content;
-  padding: 0 2em 2em 2em;
+  padding: 0 30px 30px 30px;
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
   z-index: 2;
   transition: all 500ms ease;
   color: ${colors.offWhite};
-  border-radius: 2em 0em 0em 2em;
+  border-radius: 30px 0 0 30px;
   -webkit-box-shadow: -8px -1px 4px -1px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: -8px -1px 6px -1px rgba(0, 0, 0, 0.26);
   box-shadow: -3px -1px 6px -1px rgba(0, 0, 0, 0.26);
@@ -81,11 +83,8 @@ const GridItem = styled(animated.div)`
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    padding: 0 1em;
-    font-size: 0.9em;
-  }
-  @media screen and (max-width: 728px) {
-    font-size: 0.75em;
+    padding: 0 12px;
+    font-size: 12px;
   }
 
   .highlight {
@@ -112,7 +111,6 @@ const PolkaFlex = styled.div`
   display: flex;
   color: ${colors.offWhite};
   transition: height 1000ms ease-in-out;
-
   #filler {
     margin-top: 1em;
     background-color: ${colors.offWhite};
@@ -141,6 +139,7 @@ const PolkaFlex = styled.div`
 const SectionContainer = styled.div`
   display: flex;
   gap: 1em;
+
   @media screen and (max-width: 728px) {
     flex-direction: column;
   }
@@ -185,6 +184,7 @@ const AnchorButton = styled.a`
 const Heading = styled.h1`
   font-size: 1.5em;
   grid-area: buttons;
+  text-align: center;
   color: ${colors.offWhite};
 `;
 
@@ -202,13 +202,12 @@ const ListGroup = styled.ul`
   display: ${({ variant }) => (variant === 'technology' ? 'grid' : 'flex')};
   flex-direction: column;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 0.5em;
+  margin-top: 6;
   padding-left: 0;
   @media screen and (max-width: 728px) {
     width: 80%;
     padding-left: 2em;
-    text-align: ${({ variant }) =>
-      variant === 'technology' ? 'left' : 'justify'};
+    text-align: left;
   }
 `;
 

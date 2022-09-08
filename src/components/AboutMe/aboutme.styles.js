@@ -31,8 +31,8 @@ from {transform:rotate(-78deg) }to {transform:rotate(-90deg);}`;
 
 const IconGroup = styled.div`
   display: flex;
-  margin-top: 1em;
-  gap: 0.5em;
+  margin-top: 12px;
+  gap: 6px;
 `;
 
 const IconContainer = styled.a`
@@ -41,14 +41,14 @@ const IconContainer = styled.a`
   align-items: center;
   font-size: 2em;
   padding: 0.25em;
-  background-color: ${colors.darkBlue};
+  background-color: ${colors.red};
   border-radius: 0.5em;
   color: ${colors.offWhite};
   transition: all 400ms ease;
   text-decoration: none;
   &:hover {
-    background-color: ${colors.offWhite};
-    color: ${colors.darkBlue};
+    background-color: ${colors.black};
+    color: ${colors.offWhite};
   }
 `;
 
@@ -81,7 +81,7 @@ const Portrait = styled.div`
   }
 `;
 
-const LeftContainer = styled.div`
+const LeftContainer = styled.aside`
   display: flex;
   flex-direction: column;
   flex-basis: 23%;
@@ -148,8 +148,7 @@ const LeftContainer = styled.div`
 const TechstackContainer = styled.div`
   background-color: ${colors.mediumBlue1};
   border-radius: 0em 0em 1em 1em;
-  height: 100%;
-
+  height: 45vh;
   flex-shrink: 10;
   display: flex;
   flex-direction: column;
@@ -166,32 +165,37 @@ const TechstackContainer = styled.div`
     position: relative;
     flex-grow: 1;
   }
+
   @media screen and (max-width: 1200px) {
     border-radius: 0em 1em 1em 0em;
   }
-
   h3 {
-    margin: 5px;
+    margin: 2px;
     flex-basis: 20%;
     text-align: center;
     position: relative;
   }
+
   ul {
-    margin: 5px;
+    margin: 0;
     display: flex;
     justify-self: flex-start;
     flex-direction: column;
     padding-left: 0.5em;
     flex-grow: 0;
+    flex-basis: 50%;
     list-style-type: none;
     min-width: 250px;
+
     li {
+      font-size: 16px;
       font-weight: 500;
       &:before {
         content: '🚀 ';
       }
     }
   }
+
   @media screen and (max-width: 500px) {
     ul {
       display: grid;
@@ -236,39 +240,6 @@ const AboutMeContainer = styled.div`
   transition: max-height 1s;
   position: relative;
 
-  h4 {
-    margin: 0.5em 0;
-  }
-
-  #matterport-link {
-    color: ${colors.darkBlue};
-    font-weight: 500;
-    &:link {
-      color: ${colors.darkGreen};
-    }
-    &:visited {
-      color: ${colors.darkGreen};
-    }
-  }
-
-  p {
-    margin-bottom: 0.7em;
-  }
-
-  .emphasis {
-    color: ${(props) => (props.show ? colors.black : 'transparent')};
-    font-weight: 700;
-    background-position: right;
-    background-size: ${(props) => (props.show ? '0% 100%' : '100% 100%')};
-    background-color: ${(props) => (props.show ? colors.yellow : 'none')};
-    background-image: linear-gradient(${colors.black}, ${colors.black});
-    background-repeat: no-repeat;
-    transition-property: background-size, background-color, color;
-    transition-duration: 500ms, 500ms, 500ms;
-    transition-delay: 0s, 0ms, 0ms;
-    transition-timing-function: ease-in-out;
-  }
-
   h1 {
     position: relative;
     &:after {
@@ -300,7 +271,11 @@ const StyledLink = styled(Link)`
 
 const ToolTip = styled.span`
   position: relative;
+  z-index: 999;
+  padding: 0 12px;
   background-color: ${colors.yellow};
+  color: ${colors.black};
+  transition: all 250ms ease-in-out;
   &:hover {
     &:before {
       animation-play-state: running;
@@ -309,12 +284,13 @@ const ToolTip = styled.span`
       position: absolute;
       font-size: 12px;
       font-weight: 500;
-      padding: 0.5em;
+      padding: 6px;
       width: 200px;
       border-radius: 1em;
       text-align: center;
-      background-color: ${colors.offWhite};
-      top: -3em;
+      background-color: ${colors.red};
+      color: ${colors.offWhite};
+      top: -36px;
       right: ${(props) => (props.right ? props.right : '-4.5em')};
       animation-name: ${(props) =>
         props.animationWide ? props.animationWide : slideUp728pxup};
@@ -337,21 +313,166 @@ const ToolTip = styled.span`
 const AboutInfo = styled.div`
   width: 100%;
   height: 100%;
-  border-radius: 2em 2em 2em 2em;
-  background-color: ${colors.oliveGreen}80;
-  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
- 
-`;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 
-const TextContainer = styled.div`
-  margin: 2em;
+  .about-header {
+    flex-basis: 10%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 30px 30px 30px 30px;
+    background-color: ${colors.offWhite};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1200px) {
+      p {
+        font-size: 20px;
+        padding: 12px 0;
+      }
+    }
+  }
+
+  .card {
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    position: relative;
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+
+    h4 {
+      margin: 12px 0;
+    }
+
+    .emphasis {
+      background-color: ${colors.yellow}60;
+    }
+
+    @media screen and (max-width: 1200px) {
+      height: fit-content;
+      transition: none;
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      &:hover {
+        transform: none;
+      }
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 30px 30px 30px 30px;
+      box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
+
+      @media screen and (max-width: 1200px) {
+        position: static;
+        height: fit-content;
+        backface-visibility: visible;
+      }
+    }
+
+    .card-front {
+      background-color: ${colors.offWhite};
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: 0;
+        border-width: 0 50px 50px 0;
+        transform: rotate(-90deg);
+        -moz-border-radius: 0 0 0 5px;
+        border-radius: 0 0 0 25px;
+        border-style: solid;
+        border-color: ${colors.red};
+        z-index: 1;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 10px;
+        right: 10px;
+        z-index: 2;
+        border-width: 0 50px 50px 0;
+        transform: rotate(-90deg);
+        -moz-border-radius: 0 0 0 5px;
+        border-radius: 0 0 0 25px;
+        border-style: solid;
+        border-color: ${colors.offWhite};
+      }
+
+      @media screen and (max-width: 1200px) {
+        height: fit-content;
+        transition: none;
+        &:before,
+        &:after {
+          display: none;
+        }
+
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+
+    .card-back {
+      background-color: ${colors.offWhite};
+      transform: rotateY(180deg);
+      @media screen and (max-width: 1200px) {
+        transform: rotateY(0deg);
+      }
+    }
+
+    .card-content {
+      margin: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul li {
+        padding: 2px;
+      }
+
+      .card-footer {
+        text-align: center;
+      }
+
+      @media screen and (max-width: 1200px) {
+        margin-top: 0;
+        padding: 24px 6px;
+      }
+    }
+  }
 `;
 
 export {
   Portrait,
   AboutInfo,
   IconGroup,
-  TextContainer,
   AboutMeContainer,
   LeftContainer,
   TechstackContainer,
