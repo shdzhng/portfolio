@@ -235,6 +235,7 @@ const AboutMeContainer = styled.div`
   color: ${colors.black};
   transition: max-height 1s;
   position: relative;
+
   h4 {
     margin: 0.5em 0;
   }
@@ -339,6 +340,7 @@ const AboutInfo = styled.div`
   border-radius: 2em 2em 2em 2em;
   background-color: ${colors.oliveGreen}80;
   box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
+ 
 `;
 
 const TextContainer = styled.div`

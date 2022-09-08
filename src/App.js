@@ -25,7 +25,7 @@ function App() {
         margin: '0 auto',
       }}
     >
-      <Remote />
+      {/* <Remote /> */}
       <AboutMe />
       <FadeIn>
         <Divider />

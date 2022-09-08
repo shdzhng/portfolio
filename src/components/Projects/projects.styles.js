@@ -89,8 +89,8 @@ const GridItem = styled(animated.div)`
   }
 
   .highlight {
-    background-position: bottom left;
-    background-size: 100% 0%;
+    background-position: left;
+    background-size: 0% 100%;
     background-image: ${`linear-gradient(${colors.yellow}, ${colors.yellow})`};
     background-repeat: no-repeat;
     transition: all 500ms ease-in-out;
