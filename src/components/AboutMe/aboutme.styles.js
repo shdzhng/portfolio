@@ -318,7 +318,6 @@ const AboutInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background-color: red;
 
   .about-header {
     flex-basis: 10%;
@@ -342,16 +341,18 @@ const AboutInfo = styled.div`
     }
   }
 
+  &:hover {
+    .card {
+      transform: rotateY(180deg);
+    }
+  }
+
   .card {
     height: 100%;
     width: 100%;
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
     position: relative;
-
-    &:hover {
-      transform: rotateY(180deg);
-    }
 
     h4 {
       margin: 12px 0;
