@@ -52,15 +52,12 @@ const TimeLine = styled.div`
 const Title = styled.h5`
   color: inherit;
   font-weight: 900;
+  font-size: 16px;
   margin: 0;
 `;
 
-const SmallText = styled.p`
-  font-size: 0.75em;
-`;
-
 const Info = styled.p`
-  font-size: 0.8em;
+  font-size: 14px;
   color: inherit;
 `;
 
@@ -91,7 +88,8 @@ const Badge = styled.div`
   background-color: ${colors.offWhite}20;
   width: fit-content;
   height: fit-content;
-  font-size: 0.4em;
+  font-size: 10px;
+  font-family: 'Lato', sans-serif;
   border-radius: 20px;
   background-repeat: no-repeat;
   background-position: left;
@@ -148,7 +146,7 @@ const Container = styled.div`
   }
   &:hover ${Badge} {
     background-size: 100% 100%;
-    color: black;
+    color: ${colors.black};
     font-weight: 600;
     transition: 0.3s ease-out;
   }
@@ -179,7 +177,6 @@ export {
   ProjectListItem,
   Badge,
   Title,
-  SmallText,
   TimeLine,
   TimelineContainer,
   ProjectContainer,

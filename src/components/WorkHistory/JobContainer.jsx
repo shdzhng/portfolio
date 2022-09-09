@@ -24,14 +24,16 @@ const Container = ({ job, type, openAll }, i) => {
       key={i}
     >
       <ContentContainer variant={type}>
-        <p id="name">{longName}</p>
+        <p style={{ fontFamily: 'Lato, sans-serif' }} id="name">
+          {longName}
+        </p>
         <p id="location">
           {location} | {`${start} - ${end}`}
         </p>
         <ul id="positions-ul">
           {positions.map(({ title, longTitle, type, responsibility }) => (
             <li key={title + type}>
-              <p>{longTitle}</p>
+              <p style={{ fontFamily: 'Lato, sans-serif' }}>{longTitle}</p>
               <ul>
                 {responsibility.map((task, i) => (
                   <li

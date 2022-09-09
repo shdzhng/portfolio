@@ -55,11 +55,21 @@ const ProjectContainer = ({ project }) => {
             <Heading>{name}</Heading>
             <SectionContainer>
               <div style={{ flexBasis: '45%' }}>
-                <Text variant="title">Description</Text>
+                <Text
+                  style={{ fontFamily: 'Lato, sans-serif' }}
+                  variant="title"
+                >
+                  Description
+                </Text>
                 <Text dangerouslySetInnerHTML={{ __html: description }}></Text>
               </div>
               <div style={{ flexBasis: '35%' }}>
-                <Text variant="title">Technology</Text>
+                <Text
+                  style={{ fontFamily: 'Lato, sans-serif' }}
+                  variant="title"
+                >
+                  Technology
+                </Text>
                 <ListGroup variant="technology">
                   {technologies.map((tech, i) => (
                     <ListItem key={i} variant="technology">
@@ -69,7 +79,9 @@ const ProjectContainer = ({ project }) => {
                 </ListGroup>
               </div>
             </SectionContainer>
-            <Text variant="title">Highlights</Text>
+            <Text style={{ fontFamily: 'Lato, sans-serif' }} variant="title">
+              Highlights
+            </Text>
             <ListGroup variant="highlight">
               {highlights.map((highlight, i) => (
                 <ListItem

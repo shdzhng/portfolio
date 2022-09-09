@@ -104,11 +104,20 @@ function ReferenceSlider() {
                     padding: '1em 2em',
                   }}
                 >
-                  <Heading style={{ color: colors.offWhite }}>{name}</Heading>
+                  {' '}
+                  <Heading
+                    style={{
+                      color: colors.offWhite,
+                      fontFamily: 'Lato, sans-serif',
+                    }}
+                  >
+                    {name}
+                  </Heading>
                   <SmallText
                     style={{
                       fontSize: '0.75em',
                       color: colors.offWhite,
+                      fontFamily: 'Lato, sans-serif',
                     }}
                   >
                     {organization}

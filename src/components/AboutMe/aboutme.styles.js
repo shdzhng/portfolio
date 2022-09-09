@@ -122,6 +122,7 @@ const LeftContainer = styled.aside`
     }
     &:before {
       content: '#OpenToWork';
+      font-family: 'Lato', sans-serif;
       color: ${colors.offWhite};
       top: 0em;
       left: -7.5em;
@@ -173,7 +174,6 @@ const TechstackContainer = styled.div`
     margin: 2px;
     flex-basis: 20%;
     text-align: center;
-    position: relative;
   }
 
   ul {
@@ -186,10 +186,12 @@ const TechstackContainer = styled.div`
     flex-basis: 50%;
     list-style-type: none;
     min-width: 250px;
+    padding: 15px 0 0 15px;
 
     li {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
+
       &:before {
         content: '🚀 ';
       }
@@ -282,7 +284,7 @@ const ToolTip = styled.span`
       visibility: visible;
       content: '${(props) => (props.message ? props.message : 'no content')}';
       position: absolute;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 500;
       padding: 6px;
       width: 200px;
@@ -316,6 +318,7 @@ const AboutInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
+  background-color: red;
 
   .about-header {
     flex-basis: 10%;
@@ -446,6 +449,16 @@ const AboutInfo = styled.div`
       display: flex;
       flex-direction: column;
       height: 100%;
+      line-height: 24px;
+      font-size: 18px;
+      @media screen and (max-width: 1400px) {
+        line-height: 18px;
+        font-size: 14px;
+      }
+      @media screen and (max-width: 1200px) {
+        line-height: 15px;
+        font-size: 13px;
+      }
 
       ul {
         margin: 0;

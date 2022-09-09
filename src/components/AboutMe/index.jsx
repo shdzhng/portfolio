@@ -45,10 +45,12 @@ function AboutMe() {
         <Portrait />
 
         <TechstackContainer>
-          <h3>Technology</h3>
+          <h3 style={{ fontFamily: 'Lato, sans-serif' }}>Technology</h3>
           <ul>
             {TECHNOLOGIES.map((tech, i) => (
-              <li key={i}>{tech}</li>
+              <li key={i} style={{ fontFamily: 'Lato, sans-serif' }}>
+                {tech}
+              </li>
             ))}
           </ul>
           <span id="filler" />
@@ -57,7 +59,7 @@ function AboutMe() {
 
       <AboutInfo>
         <div className="about-header">
-          <p>
+          <p style={{ fontWeight: '700' }}>
             Hi there! My name is{' '}
             <CustomToolTip
               message='💡 pronounced like a "tv show"'

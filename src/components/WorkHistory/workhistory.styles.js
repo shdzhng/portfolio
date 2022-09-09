@@ -98,6 +98,7 @@ const JobContainer = styled.div`
     background-color: ${colors.darkBlue};
     color: ${colors.offWhite};
     content: '${({ trueHeader }) => trueHeader}';
+    font-family: Lato, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;

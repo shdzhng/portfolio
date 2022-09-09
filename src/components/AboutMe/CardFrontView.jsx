@@ -15,29 +15,31 @@ const CardFrontView = () => {
         <span className="emphasis">1.5 generation Chinese-born American</span>{' '}
         who moved to Norfolk, Virginia at age 10 where I became the only student
         of Asian ancestry in my entire school. My familys' immigration story,
-        like most others, is one filled with sacrifice and perserverance.{' '}
+        like many others, is one of a humble beginning paved with sacrifice and
+        perserverance.{' '}
         <span className="emphasis">
           Through which I learned the importance tenacity and kindness - and
-          guided me to pursue a professional life of service.
-        </span>
+          inspired me to pursue a life of service.
+        </span>{' '}
+        Because I have experienced living in different places, I hold a deep
+        intrigue for how society and individuals engage with the spaces that
+        surround us - and I'm excited be pivoting my focus towards digital
+        spaces!
       </p>
       <p>
         My professional background is in the{' '}
         <span className="emphasis">Museum and Social Science</span> where I also
         hold a Master's degree in Tourism, Society and Environment from
-        Wageningen University in the Netherlands. I've always held an innate
-        intrigue for how society and individuals engage with built spaces and
-        I'm excited be pivoting my focus towards digital spaces!
-      </p>
-      <p>
-        As an Education and Program Coordinator, I leveraged my academic
-        background to connect the intersection of academia and public history.
-        As a Smithsonian intern, I utilized my statistics skills to conduct
-        Program Impact Evaluation.
+        Wageningen University in the Netherlands. As a{' '}
+        <span className="emphasis">Education and Program Coordinator</span>, I
+        leveraged my academic background to connect the intersection of academia
+        and public history. As an{' '}
+        <span className="emphasis"> intern at the Smithsonian</span>, I utilized
+        my statistics skills to conduct Program Impact Evaluation.
       </p>
       <p>
         As you might be able to tell, I am someone who enjoys wearing many hats
-        to see all aspects of operation! See my references below :)
+        to see all aspects of operation!
       </p>
     </>
   );

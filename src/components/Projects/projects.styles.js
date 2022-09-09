@@ -145,7 +145,8 @@ const SectionContainer = styled.div`
   }
 
   img {
-    width: 45%;
+    max-height: 400px;
+    max-width: 600px;
   }
 `;
 
@@ -165,6 +166,7 @@ const AnchorButton = styled.a`
   justify-content: center;
   align-content: center;
   text-align: center;
+  font-family: 'Lato', sans-serif;
   height: 2em;
   width: 4em;
   background-color: ${colors.offWhite};
@@ -183,6 +185,7 @@ const AnchorButton = styled.a`
 
 const Heading = styled.h1`
   font-size: 1.5em;
+  font-family: 'Lato', sans-serif;
   grid-area: buttons;
   text-align: center;
   color: ${colors.offWhite};
@@ -247,7 +250,8 @@ const SideBarItem = styled.div`
   position: relative;
   left: ${(props) => (props.active ? '3em' : '4em')};
   font-weight: ${(props) => (props.active ? 600 : 500)};
-  font-size: 0.8em;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
   top: -5em;
   color: ${(props) => (props.active ? colors.offWhite : colors.oliveGreen)};
   width: 200px;

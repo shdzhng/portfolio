@@ -16,11 +16,13 @@ function CardBackView() {
         seeing the final product of a museum exhibit that I helped coordinate
         into the Matterport.{' '}
         <span className="emphasis">
-          I was thoroughly impressed by the myriad of ways that technology
-          empowered the museum{' '}
+          I was so impressed by the myriad of ways that technology empowered the
+          museum{' '}
         </span>{' '}
-        in terms of the limitations of space, engagement, program/exhibit
-        scalability, and accessibility that I decided to make the transition.
+        (in terms of overcoming the limitations of space, and improving
+        engagement, impact accountability,program/exhibit scalability, and
+        accessibility){' '}
+        <span className="emphasis">that I decided to make the transition.</span>
       </p>
       <p>
         Looking forward, I am excited to branch out and explore all areas of
