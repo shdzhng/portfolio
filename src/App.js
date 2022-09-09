@@ -11,10 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    console.log(
-      '%c  ⚡ Handmade with React and Styled-Components ⚡! ',
-      'background: #222; color: #bada55'
-    );
+    console.log('%c  ⚡ You found me ⚡! ', 'background: #222; color: #bada55');
   }, []);
 
   return (
