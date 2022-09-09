@@ -77,7 +77,7 @@ const Portrait = styled.div`
     background-position-y: -250px;
   }
   @media screen and (max-width: 600px) {
-    background-position-y: -100px;
+    background-position-y: 0px;
   }
 `;
 
@@ -167,11 +167,8 @@ const TechstackContainer = styled.div`
     flex-grow: 1;
   }
 
-  @media screen and (max-width: 1200px) {
-    border-radius: 0em 1em 1em 0em;
-  }
   h3 {
-    margin: 2px;
+    margin-top: 20px;
     flex-basis: 20%;
     text-align: center;
   }
@@ -187,11 +184,9 @@ const TechstackContainer = styled.div`
     list-style-type: none;
     min-width: 250px;
     padding: 15px 0 0 15px;
-
     li {
       font-size: 16px;
       font-weight: 600;
-
       &:before {
         content: '🚀 ';
       }
@@ -199,27 +194,20 @@ const TechstackContainer = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    ul {
-      display: grid;
-      grid-template-columns: auto auto;
+    ul li {
+      font-size: 12px;
     }
-    #filler {
-      display: none;
-    }
-  }
-  @media screen and (min-width: 1000px) {
     h3 {
-      margin-top: 1em;
-      margin-bottom: 0;
-      padding: 0;
+      margin: 0;
     }
   }
+
   @media screen and (max-width: 1200px) {
-    #filler {
-      display: none;
-    }
+    border-radius: 0em 1em 1em 0em;
+    justify-content: space-around;
     ul {
-      margin-bottom: 2em;
+      font-size: 16px;
+      margin-bottom: 0;
     }
   }
 `;
