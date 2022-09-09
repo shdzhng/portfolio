@@ -13,9 +13,9 @@ const CardFrontView = () => {
       <p>
         I am a{' '}
         <span className="emphasis">1.5 generation Chinese-born American</span>{' '}
-        who moved to Norfolk, Virginia at age 10 where I became the only student
-        of Asian ancestry in my entire school. My familys' immigration story,
-        like many others, is one of a humble beginning paved with sacrifice and
+        who moved to Norfolk, Virginia at age 10 and became the only student of
+        Asian ancestry in my entire school. My familys' immigration story, like
+        many others, is one of a humble beginning paved with sacrifice and
         perserverance.{' '}
         <span className="emphasis">
           Through which I learned the importance tenacity and kindness - and

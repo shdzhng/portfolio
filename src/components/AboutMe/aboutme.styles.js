@@ -87,7 +87,6 @@ const LeftContainer = styled.aside`
   flex-basis: 23%;
   border-radius: 1em;
   box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
-
   @media screen and (max-width: 1200px) {
     flex-direction: row;
     height: fit-content;
@@ -168,8 +167,7 @@ const TechstackContainer = styled.div`
   }
 
   h3 {
-    margin-top: 20px;
-    flex-basis: 20%;
+    flex-basis: 10%;
     text-align: center;
   }
 
@@ -183,7 +181,7 @@ const TechstackContainer = styled.div`
     flex-basis: 50%;
     list-style-type: none;
     min-width: 250px;
-    padding: 15px 0 0 15px;
+    padding: 0 0 0 15px;
     li {
       font-size: 16px;
       font-weight: 600;
@@ -339,7 +337,7 @@ const AboutInfo = styled.div`
     height: 100%;
     width: 100%;
     transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
+    transition: all 500ms ease-in-out;
     position: relative;
 
     h4 {
