@@ -7,12 +7,10 @@ const Container = styled.div`
   right: 130px;
   margin-top: 24px;
   width: 80vw;
-
   display: flex;
   height: auto;
   left: -72px;
   position: relative;
-
   transition: all 100ms ease;
   @media screen and (max-width: 728px) {
     flex-direction: column;
@@ -56,12 +54,10 @@ const GridItem = styled(animated.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   max-height: fit-content;
   padding: 0 30px 30px 30px;
   overflow-y: auto;
   overflow-x: hidden;
-  width: 100%;
   z-index: 2;
   transition: all 500ms ease;
   color: ${colors.offWhite};
@@ -94,7 +90,6 @@ const GridItem = styled(animated.div)`
     background-repeat: no-repeat;
     transition: all 500ms ease-in-out;
   }
-
   &:hover {
     .highlight {
       background-size: 100% 100%;
@@ -120,10 +115,8 @@ const PolkaFlex = styled.div`
     flex-grow: 1;
     flex-basis: 30%;
   }
-
   @media screen and (max-width: 1200px) {
     width: 100vw;
-
     #filler {
       flex-basis: 20%;
     }
@@ -139,14 +132,15 @@ const PolkaFlex = styled.div`
 const SectionContainer = styled.div`
   display: flex;
   gap: 1em;
-
-  @media screen and (max-width: 728px) {
-    flex-direction: column;
-  }
-
   img {
     max-height: 400px;
     max-width: 600px;
+  }
+  @media screen and (max-width: 728px) {
+    flex-direction: column;
+    img {
+      display: none;
+    }
   }
 `;
 
@@ -154,7 +148,6 @@ const ButtonGroup = styled.div`
   display: flex;
   gap: 1em;
   flex-direction: column;
-
   @media screen and (max-width: 728px) {
     flex-direction: row;
     margin-bottom: 1em;
@@ -236,7 +229,6 @@ const SideBar = styled.div`
   gap: 0.25em;
   animation: ${slideFromRight} 1000ms ease-in-out;
   animation-play-state: running;
-
   @media screen and (max-width: 728px) {
     flex-direction: row;
     animation: none;
@@ -257,7 +249,6 @@ const SideBarItem = styled.div`
   width: 200px;
   height: 18px;
   transition: all 250ms ease;
-
   &:before {
     content: '';
     width: ${(props) => (props.active ? '0' : '16px')};
