@@ -32,6 +32,7 @@ function CardBackView() {
       <h4 style={{ marginBottom: '0px' }}>When I'm not coding I enjoy:</h4>
       <ul>
         <li>🪴 Tending my young garden</li>
+        <li>🐾 Bothering my cats (Cabbage🐈‍⬛ and Beans🐈)</li>
         <li>🎲 Boardgame/PC game nights with friends and co-workers </li>
         <li>🥾 Hiking, Camping, Photography</li>
         <li>📖 Reading memoirs and other non-fictions</li>
