@@ -85,6 +85,7 @@ const LeftContainer = styled.aside`
   display: flex;
   flex-direction: column;
   flex-basis: 23%;
+  height: fit-content;
   border-radius: 1em;
   box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
   @media screen and (max-width: 1200px) {
@@ -148,7 +149,7 @@ const LeftContainer = styled.aside`
 const TechstackContainer = styled.div`
   background-color: ${colors.mediumBlue1};
   border-radius: 0em 0em 1em 1em;
-  height: 45vh;
+  height: fit-content;
   flex-shrink: 10;
   display: flex;
   flex-direction: column;

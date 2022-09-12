@@ -6,7 +6,6 @@ import Divider from './static/components/Divder';
 import FadeIn from './static/components/FadeIn';
 import AboutMe from './components/AboutMe';
 import WorkHistory from './components/WorkHistory';
-import Remote from './static/components/Remote';
 import Footer from './components/Footer';
 
 function App() {
@@ -26,8 +25,6 @@ function App() {
         margin: '0 auto',
       }}
     >
-      {/* <Remote /> */}
-
       <AboutMe />
 
       <FadeIn>
