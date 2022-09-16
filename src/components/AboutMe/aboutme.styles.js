@@ -85,7 +85,6 @@ const LeftContainer = styled.aside`
   display: flex;
   flex-direction: column;
   flex-basis: 23%;
-  height: fit-content;
   border-radius: 1em;
   box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
   @media screen and (max-width: 1200px) {
@@ -104,7 +103,6 @@ const LeftContainer = styled.aside`
     width: 1em;
     border-radius: 1em;
     left: -0.15em;
-
     @media screen and (max-width: 750px) {
       display: none;
     }
@@ -149,7 +147,7 @@ const LeftContainer = styled.aside`
 const TechstackContainer = styled.div`
   background-color: ${colors.mediumBlue1};
   border-radius: 0em 0em 1em 1em;
-  height: fit-content;
+  height: 100%;
   flex-shrink: 10;
   display: flex;
   flex-direction: column;
@@ -224,6 +222,7 @@ const AboutMeContainer = styled.div`
   line-height: 1.3em;
   gap: 1em;
   justify-content: space-evenly;
+  justify-content: stretch;
   font-weight: 400;
   color: ${colors.black};
   transition: max-height 1s;
@@ -301,7 +300,8 @@ const ToolTip = styled.span`
 
 const AboutInfo = styled.div`
   width: 100%;
-  height: 100%;
+
+  height: 80vh;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -436,9 +436,10 @@ const AboutInfo = styled.div`
       margin: 30px 24px;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      height: fit-content;
       line-height: 24px;
       font-size: 18px;
+
       @media screen and (max-width: 1400px) {
         line-height: 18px;
         font-size: 14px;
@@ -459,6 +460,8 @@ const AboutInfo = styled.div`
       }
 
       .card-footer {
+        display: block;
+        margin: 0;
         text-align: center;
       }
 

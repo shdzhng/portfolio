@@ -30,6 +30,7 @@ function AboutMe() {
 
   return (
     <AboutMeContainer
+      style={{ height: '100vh' }}
       id="about"
       onMouseEnter={() => {
         setShow(true);
