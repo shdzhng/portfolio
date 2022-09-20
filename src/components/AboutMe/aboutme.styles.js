@@ -300,7 +300,6 @@ const ToolTip = styled.span`
 
 const AboutInfo = styled.div`
   width: 100%;
-
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -328,7 +327,8 @@ const AboutInfo = styled.div`
     }
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     .card {
       transform: rotateY(180deg);
     }
@@ -340,6 +340,9 @@ const AboutInfo = styled.div`
     transform-style: preserve-3d;
     transition: all 500ms ease-in-out;
     position: relative;
+    p {
+      z-index: 99;
+    }
 
     h4 {
       margin: 12px 0;
@@ -347,19 +350,6 @@ const AboutInfo = styled.div`
 
     .emphasis {
       background-color: ${colors.yellow}60;
-    }
-
-    @media screen and (max-width: 1200px) {
-      height: fit-content;
-      transition: none;
-      &:before,
-      &:after {
-        display: none;
-      }
-
-      &:hover {
-        transform: none;
-      }
     }
 
     .card-front,
@@ -370,12 +360,6 @@ const AboutInfo = styled.div`
       backface-visibility: hidden;
       border-radius: 30px 30px 30px 30px;
       box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.25);
-
-      @media screen and (max-width: 1200px) {
-        position: static;
-        height: fit-content;
-        backface-visibility: visible;
-      }
     }
 
     .card-front {
@@ -409,27 +393,11 @@ const AboutInfo = styled.div`
         border-style: solid;
         border-color: ${colors.offWhite};
       }
-
-      @media screen and (max-width: 1200px) {
-        height: fit-content;
-        transition: none;
-        &:before,
-        &:after {
-          display: none;
-        }
-
-        &:hover {
-          transform: none;
-        }
-      }
     }
 
     .card-back {
       background-color: ${colors.offWhite};
       transform: rotateY(180deg);
-      @media screen and (max-width: 1200px) {
-        transform: rotateY(0deg);
-      }
     }
 
     .card-content {

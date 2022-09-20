@@ -29,33 +29,22 @@ function App() {
 
       <FadeIn>
         <Divider />
-      </FadeIn>
-
-      <FadeIn>
         <ProjectDisplay style={{ height: '100vh' }} />
       </FadeIn>
 
       <FadeIn>
         <Divider />
-      </FadeIn>
-      <FadeIn>
         <WorkHistory style={{ height: '100vh' }} />
       </FadeIn>
 
       <FadeIn>
         <Divider />
-      </FadeIn>
-
-      <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }} id="reference">
           References (LinkedIn)
         </h1>
         <ReferenceSlider />
       </FadeIn>
 
-      <FadeIn>
-        <Divider />
-      </FadeIn>
       <FadeIn>
         <h1 style={{ margin: '1em 0', textAlign: 'center' }}> Education </h1>
         <Timeline id="education-timeline" />

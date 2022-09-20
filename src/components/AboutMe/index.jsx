@@ -79,7 +79,6 @@ function AboutMe() {
           </div>
           <div className="card-back">
             <div className="card-content">
-              {' '}
               <CardBackView />
             </div>
           </div>
