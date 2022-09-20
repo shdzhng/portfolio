@@ -66,13 +66,15 @@ const GridItem = styled(animated.div)`
   -moz-box-shadow: -8px -1px 6px -1px rgba(0, 0, 0, 0.26);
   box-shadow: -3px -1px 6px -1px rgba(0, 0, 0, 0.26);
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
+
     background-color: ${colors.offBlue};
   }
   ::-webkit-scrollbar-track {
     background: ${colors.offBlue};
   }
   ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
     background: ${colors.yellow};
   }
   @media screen and (max-width: 1000px) {
