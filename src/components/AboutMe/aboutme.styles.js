@@ -211,11 +211,10 @@ const TechstackContainer = styled.div`
 
 const AboutMeContainer = styled.div`
   margin-top: 2em;
-  padding: 2em;
+  padding: 1.25em;
   border-radius: 2em;
   border: 4px dotted ${colors.darkBlue};
   width: 60vw;
-  height: fit-content;
   min-width: 400px;
   background-color: ${colors.lightBlue}90;
   display: flex;
@@ -364,7 +363,14 @@ const AboutInfo = styled.div`
 
     .card-front {
       background-color: ${colors.offWhite};
-      &:after {
+      .next {
+        color: ${colors.darkBlue};
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 50px;
+      }
+      /* &:after {
         content: '';
         position: absolute;
         display: block;
@@ -377,7 +383,7 @@ const AboutInfo = styled.div`
         border-style: solid;
         border-color: ${colors.red};
         z-index: 1;
-      }
+      } */
 
       &:before {
         content: '';

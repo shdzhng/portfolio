@@ -11,7 +11,7 @@ const TimelineContainer = styled.div`
   display: flex;
   width: 70vw;
   height: fit-content;
-  margin-bottom: 10em;
+  margin-bottom: 20px;
   @media screen and (min-width: 728px) {
     width: 60vw;
     flex-direction: column;

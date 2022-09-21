@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
-
+import ForwardIcon from '@mui/icons-material/Forward';
+import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty';
 const CardFrontView = () => {
   return (
     <>
@@ -28,9 +29,9 @@ const CardFrontView = () => {
       </p>
       <p>
         My professional background is in the{' '}
-        <span className="emphasis">Museum and Social Science</span> where I also
-        hold a Master's degree in Tourism, Society and Environment from
-        Wageningen University in the Netherlands. As a{' '}
+        <span className="emphasis">Museum and Social Science</span> where I hold
+        a Master's degree in Tourism, Society and Environment from Wageningen
+        University in the Netherlands. As a{' '}
         <span className="emphasis">Education and Program Coordinator</span>, I
         leveraged my academic background to connect the intersection of academia
         and public history. As an{' '}
@@ -39,7 +40,16 @@ const CardFrontView = () => {
       </p>
       <p>
         As you might be able to tell, I am someone who enjoys wearing many hats
-        to see all aspects of operation!
+        and seeing all aspects of operation!
+      </p>
+      <p className="next">
+        <ThreeSixtyIcon
+          style={{
+            display: 'inline-flex',
+            verticalAlign: 'text-bottom',
+            fontSize: 'inherit',
+          }}
+        />
       </p>
     </>
   );

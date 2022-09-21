@@ -18,7 +18,13 @@ function WorkHistory() {
   };
 
   return (
-    <>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+      }}
+    >
       <h1 id="whereibeen" ref={viewElement}>
         Where I've <span />
       </h1>
@@ -41,7 +47,7 @@ function WorkHistory() {
           </button>
         </div>
       </JobsContainer>
-    </>
+    </div>
   );
 }
 
