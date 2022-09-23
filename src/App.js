@@ -33,6 +33,9 @@ function App() {
         margin: '0 auto',
       }}
     >
+      <a href="#projects" id="skip">
+        Skip to Projects
+      </a>
       <AboutMe />
       <Next url="projects" offset={-100} />
 

@@ -1,3 +1,19 @@
+:root {
+  --oliveGreen: #606c38;
+  --darkGreen: #283618;
+  --offWhite: #faf8ed;
+  --lightBrown: #dda15e;
+  --lightGray: #c4c4c4;
+  --darkBrown: #bc6c25;
+  --yellow: #e8c564;
+  --red: #db542e;
+  --offBlue: #cae9ff;
+  --lightBlue: #bee9e8;
+  --mediumBlue1: #62b6cb;
+  --mediumBlue2: #5fa8d3;
+  --darkBlue: #1b4965;
+  --black: #000000;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,6 +27,26 @@ body {
   width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+#skip {
+  background-color: var(--yellow);
+  padding: 0.5em 1em;
+  position: fixed;
+  border-radius: 0 0 1em 1em;
+  top: 0;
+  left: 1em;
+  font-weight: 700;
+  color: var(--darkBlue);
+  text-decoration: none;
+  transform: translateY(-100%);
+  transition: all 0.3s;
+}
+
+#skip:focus {
+  transform: translateX(0%);
+  color: var(--offWhite);
+  background-color: var(--red);
 }
 
 #down-btn {
