@@ -26,6 +26,20 @@ const projectData = [
     },
   },
   {
+    name: 'RPG Character Maker',
+    description:
+      'RPG Character Maker is a interactive web application that renders a character page based on user input.',
+    highlights: [
+      'Employed React and styled-components to construct <span class="highlight"> interactive form components </span> enabling users to interact with the web application.',
+      'Incorporated React Context API to <span class="highlight"> allow different Next.js pages to have access to the same data.',
+    ],
+    technologies: ['React', 'Next.js', 'Javascript', 'styled-components'],
+    links: {
+      github: 'https://github.com/shdzhng/RPGMaker-challenge',
+      demo: 'https://rpg-character-maker-eta.vercel.app/',
+    },
+  },
+  {
     name: 'Bruce Lee Tree',
     description:
       "A digital exhibit of my research findings (during my time as a museum professional) into Bruce Lee's philosophical inspirations to reveal the network of ideas and people that shaped Bruce Lee's attitude and outlook on life, success, martial arts and how he went on to inspire generations to come.",
