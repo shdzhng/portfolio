@@ -1,13 +1,10 @@
 import React, { useState, memo } from 'react';
 import projectData from '../../static/data/projectData';
-import { Container, SideBarItem, SideBar, PolkaFlex } from './projects.styles';
-import ProjectContainer from './ProjectContainer';
+import { Container, SideBarItem, SideBar } from "./projects.styles";
+import ProjectContainer from "./ProjectContainer";
 
 function ProjectDisplay() {
-  const [selectedProjectId, setSelectedProjectId] = useState(0);
-  const handleSelect = (i) => {
-    setSelectedProjectId(i);
-  };
+  const { selectedProjectId, handleSelect } = useSelectProjectById();
 
   return (
     <>
@@ -38,3 +35,12 @@ function ProjectDisplay() {
 }
 
 export default ProjectDisplay;
+
+const useSelectProjectById = () => {
+  const [selectedProjectId, setSelectedProjectId] = useState(0);
+  const handleSelect = (i) => {
+    setSelectedProjectId(i);
+  };
+
+  return { selectedProjectId, handleSelect };
+};

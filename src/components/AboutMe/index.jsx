@@ -11,18 +11,19 @@ import CardFrontView from './CardFrontView.jsx';
 import { CustomToolTip } from './CustomToolTip';
 
 const TECHNOLOGIES = [
-  'HTML',
-  'CSS',
-  'Javascript',
-  'React',
-  'Redux Toolkit',
-  'NPM',
-  'REST API',
-  'Git/Github',
-  'Chart.js',
-  'Styled-Components',
-  'GraphQL/Apollo',
-  'Firebase/Firestore',
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "REST API",
+  "Git/Github",
+  "Chart.js",
+  "Styled-Components",
+  "GraphQL/Apollo",
+  "Firebase/Firestore",
+  "Mixpanel",
 ];
 
 function AboutMe() {

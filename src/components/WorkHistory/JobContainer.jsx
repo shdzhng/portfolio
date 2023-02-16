@@ -1,5 +1,6 @@
 import React, { useState, useEffect, memo } from 'react';
 import { JobContainer, ContentContainer } from './workhistory.styles';
+import { SideBarItem, SideBar } from "../Projects/projects.styles";
 
 const Container = ({ job, type, openAll }, i) => {
   const [show, setShow] = useState(false);

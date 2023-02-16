@@ -11,7 +11,7 @@ const Container = styled.div`
   height: auto;
   left: -72px;
   position: relative;
-  transition: all 100ms ease;
+  transition: all 50ms ease;
   @media screen and (max-width: 728px) {
     flex-direction: column;
     align-items: center;
@@ -21,8 +21,9 @@ const Container = styled.div`
     left: 0;
   }
 `;
+
 const ModalBackground = styled.div`
-  display: ${(props) => (props.open ? 'inline-flex' : 'none')};
+  display: ${(props) => (props.open ? "inline-flex" : "none")};
   position: fixed;
   top: 0;
   left: 0;
@@ -50,6 +51,7 @@ const ModalContent = styled.div`
 
 const GridItem = styled(animated.div)`
   background-color: ${colors.darkBlue};
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -67,7 +69,6 @@ const GridItem = styled(animated.div)`
   box-shadow: -3px -1px 6px -1px rgba(0, 0, 0, 0.26);
   ::-webkit-scrollbar {
     width: 10px;
-
     background-color: ${colors.offBlue};
   }
   ::-webkit-scrollbar-track {
@@ -102,33 +103,12 @@ const GridItem = styled(animated.div)`
 
 const PolkaFlex = styled.div`
   background-color: ${colors.offBlue};
-  border-radius: 3em 1em 1em 3em;
-  width: 65vw;
+  border-radius: 3em;
+  width: 100vw;
   margin: 0 auto;
   display: flex;
   color: ${colors.offWhite};
   transition: height 1000ms ease-in-out;
-  #filler {
-    margin-top: 1em;
-    background-color: ${colors.offWhite};
-    mask-image: url(${polkadot});
-    mask-size: 250%;
-    position: relative;
-    flex-grow: 1;
-    flex-basis: 30%;
-  }
-  @media screen and (max-width: 1200px) {
-    width: 100vw;
-    #filler {
-      flex-basis: 20%;
-    }
-  }
-  @media screen and (max-width: 728px) {
-    width: 80vw;
-    #filler {
-      flex-basis: 10%;
-    }
-  }
 `;
 
 const SectionContainer = styled.div`
