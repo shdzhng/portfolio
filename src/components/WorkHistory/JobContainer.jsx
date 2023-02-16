@@ -24,7 +24,7 @@ const Container = ({ job, type, openAll }, i) => {
       key={i}
     >
       <ContentContainer variant={type}>
-        <p style={{ fontFamily: 'Lato, sans-serif' }} id="name">
+        <p style={{ fontFamily: "Lato, sans-serif" }} id="name">
           {longName}
         </p>
         <p id="location">
@@ -33,19 +33,19 @@ const Container = ({ job, type, openAll }, i) => {
         <ul id="positions-ul">
           {positions.map(({ title, longTitle, type, responsibility }) => (
             <li key={title + type}>
-              <p style={{ fontFamily: 'Lato, sans-serif' }}>{longTitle}</p>
+              <p style={{ fontFamily: "Lato, sans-serif" }}>{longTitle}</p>
               <ul>
                 {responsibility.map((task, i) => (
                   <li
                     key={task + i}
                     dangerouslySetInnerHTML={{ __html: task }}
-                  ></li>
+                  />
                 ))}
               </ul>
             </li>
           ))}
         </ul>
-        {type === 'volunteer' ? null : (
+        {type === "volunteer" ? null : (
           <>
             <p id="skills-ul">
               <span id="skills-header">Skills: </span>

@@ -1,6 +1,30 @@
 const employmentData = {
   cultural: [
     {
+      name: "Tapply Inc",
+      longName: "Tapply Inc",
+      start: "10/2022",
+      end: "01/2023",
+      location: "Remote",
+      positions: [
+        {
+          title: "👨‍💻 Frontend Engineer Intern",
+          longTitle: "Frontend Engineer Intern",
+          type: "Internship",
+          responsibility: [
+            "Architected React components for the message-sending experience to improve chat room experience",
+            "Integrated Mixpanel event tracking and leveraged training in social sciences survey construction to build a user activity tracking system to provide KPI insight to company leadership",
+            "Translated Figma design into modular and responsive React components",
+            "Actively participated in live site reviews and collaborated with the team to align expectations and delivery estimates",
+            "Proactively identified, proposed, and implemented process improvements to boost team efficiency",
+            "Maintained and debugged the frontend code base with a can-do attitude",
+            "Worked closely with other developers to ensured parallel performance across browsers, devices and PWA",
+          ],
+        },
+      ],
+      skills: ["JavaScript", "Next.js", "PWA", "React", "Mixpanel", "Figma"],
+    },
+    {
       name: "CHSA Museum",
       longName: "Chinese Historical Society of America Museum",
       start: "02/2021",

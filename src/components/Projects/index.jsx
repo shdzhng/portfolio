@@ -11,10 +11,10 @@ function ProjectDisplay() {
 
   return (
     <>
-      <h1 id="projects" style={{ margin: '1em 0', textAlign: 'center' }}>
-        🛠️ What I've Built 🛠️
+      <h1 id="projects" style={{ margin: "1em 0", textAlign: "center" }}>
+        🛠️ Team and Solo Projects🛠️
       </h1>
-      <Container style={{ marginBottom: '2em' }}>
+      <Container style={{ marginBottom: "2em" }}>
         <SideBar>
           {projectData.map((project, i) => (
             <SideBarItem
