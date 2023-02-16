@@ -61,7 +61,6 @@ const Portrait = styled.div`
   background-position-x: 0px;
   background-position-y: -230px;
   background-repeat: no-repeat;
-  animation: ${backgroundImageZoom} 1000ms ease;
   z-index: 5;
 
   @media screen and (max-width: 1200px) {
